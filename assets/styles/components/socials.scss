@@ -1,0 +1,31 @@
+.d-socials {
+  font-size: 1.125rem;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &Item {
+      @include transition;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &--fb {
+        color: #4267b2;
+      }
+
+      &--in {
+        color: #df218a;
+      }
+
+      &Link {
+        display: block;
+        padding: 0.5em;
+        color: currentColor;
+      }
+    }
+  }
+}

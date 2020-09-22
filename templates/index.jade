@@ -1,0 +1,192 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        title Шторы на заказ в Украине c уникальным дизайном - Drapesdesign
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='title', content='Шторы на заказ в Украине c уникальным дизайном - Drapesdesign')
+        meta(name='description', content='Шторы на заказ с уникальным дизайном на любой вкус и бюджет. Мы подбираем самые разные материалы: шифон, кристалон, органза, батист, что делает продукт доступным для всех. Доставка по всей Украине в течении 5 дней')
+        meta(name='keywords', content='Шторы на заказ недорого в Украине')
+        meta(property='og:title', content='Шторы на заказ в Украине c уникальным дизайном – Drapesdesign')
+        meta(property='og:description', content='Шторы на заказ с уникальным дизайном на любой вкус и бюджет. Мы подбираем самые разные материалы: шифон, кристалон, органза, батист, что делает продукт доступным для всех. Доставка по всей Украине в течении 5 дней')
+        meta(property='og:type', content='website')
+        meta(property='og:url', content='https://drapesdesign.com.ua/')
+        meta(property='og:site_name', content='drapesdesign.com.ua')
+        meta(property='og:image', content='images/drapesdesign_share.jpg')
+        link(rel='icon', type='image/x-icon', href='images/fav.png')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+        link(rel='stylesheet', href='styles/styles.css')
+    body#body
+        .l-wrapper
+            include components/topbar
+            include components/header
+            main
+                section.d-section.d-section--hero
+                    .d-section__content
+                        h1.d-section__title.d-section__title--hero Шторы на заказ с уникальным дизайном на любой вкус и бюджет
+                        h2.d-section__subtitle.d-section__subtitle--hero
+                            | Именно здесь вы найдете лучшие дизайнерские гардины ручной работы на любой вкус и дизайн, которые не только украсят Ваш дом, но и добавят свежести, уюта и красок в повседневную жизнь.
+                        .d-section__buttons
+                            a.d-button.d-button--bordered.nav-link(href='#contacts')
+                                span Сделать заказ
+                            a.d-button.d-button--bordered.nav-link(href='#about-us')
+                                span Узнать больше
+                section#about-us.d-section
+                    .d-section__content
+                        h1.d-section__title О нас
+                        h3.d-section__subtitle
+                            p
+                                | Дизайнерские шторы от Drapesdesign состоят из отдельных полосок, которые можно двигать и менять местами, если хочется чего-то нового, не тратя много усилий. Все элементы гардин подбираются под цвет и стиль общего интерьера комнаты или квартиры индивидуально.
+                            p
+                                | Мы подбираем самые разные материалы, что делает продукт доступным для всех. Изюминкой таких авторских гардин есть элементы декора, которые гармонично соединяются с основными цветами.
+                            p
+                                | Окружите себя красотой и уютом, а мы позаботимся о том, чтобы это было доступно и качественно!
+                        ul.d-features
+                            li.d-features__item
+                                i.fas.fa-palette
+                                h4.d-features__itemTitle
+                                    | Уникальный
+                                    br
+                                    | дизайн
+                            li.d-features__item
+                                i.fas.fa-check
+                                h4.d-features__itemTitle
+                                    | Качественные
+                                    br
+                                    | материалы
+                            li.d-features__item
+                                i.fas.fa-wallet
+                                h4.d-features__itemTitle
+                                    | Доступная
+                                    br
+                                    | цена
+                            li.d-features__item
+                                i.far.fa-clock
+                                h4.d-features__itemTitle
+                                    | Срок изготовления
+                                    br
+                                    | 3-5 дней
+                            li.d-features__item
+                                i.fas.fa-shipping-fast
+                                h4.d-features__itemTitle
+                                    | Доставка по
+                                    br
+                                    | всей Украине
+                section#portfolio.d-section
+                    .d-section__content
+                        h1.d-section__title Портфолио
+                        h3.d-section__subtitle
+                            | Ниже представлены примеры работ, выполнены с использованием различных материалов: шифон, кристалон, органза, батист и декораций
+                        .d-tiles
+                            ul.d-tiles__list
+                                - for (let index = 1; index <= 46; index++)
+                                    li.d-tiles__item(class = index >= 29 && 'd-tiles__item--wide')
+                                        div.d-tiles__itemContent
+                                            button.d-tiles__itemBtn
+                                                i.fas.fa-search
+                                            img(data-index=index, src='images/gallery/'+index+'.jpg', alt='Шторы на заказ Drapesdesign')
+                            .d-preview.js-preview.is-hidden
+                                .d-preview__nav
+                                    button.d-preview__navBtn.d-preview__navBtn--prev
+                                    button.d-preview__navBtn.d-preview__navBtn--next
+                                button.d-preview__btn.js-preview-close
+                                .d-preview__content
+                                    img.d-preview__img(src='#', alt='Preview image')
+                        // <div class="d-slider">
+                        // <div class="d-slider__content">
+                        // <div class="swiper-container">
+                        // &lt;!&ndash; Additional required wrapper &ndash;&gt;
+                        // <div class="swiper-wrapper">
+                        // &lt;!&ndash; Slides &ndash;&gt;
+                        // <div class="swiper-slide"><img src="images/gallery/1.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/2.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/3.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/4.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/5.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/6.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/7.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/8.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/9.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/10.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/11.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/12.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/13.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/14.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/15.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/16.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/17.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // <div class="swiper-slide"><img src="images/gallery/18.jpg" alt="Шторы на заказ Drapesdesign"></div>
+                        // </div>
+                        // &lt;!&ndash; If we need pagination &ndash;&gt;
+                        // <div class="swiper-pagination"></div>
+                        // </div>
+                        // &lt;!&ndash; If we need navigation buttons &ndash;&gt;
+                        // <div class="swiper-button-prev"></div>
+                        // <div class="swiper-button-next"></div>
+                        // </div>
+                        // </div>
+                section#contacts.d-section
+                    .d-section__content
+                        h1.d-section__title Контакты
+                        h3.d-section__subtitle
+                            | Заполните форму обратной связи и наш менеджер свяжется с Вами в ближайшее время или воспользуйтесь контактными данными, чтобы сделать заказ или для уточнения деталей
+                        .d-contacts
+                            .d-contacts__col
+                                form#contacts-form(action='https://formspree.io/mqkbejod', method='POST')
+                                    label.d-contacts__label
+                                        input.d-contacts__input(name='contact_form', type='text', placeholder='Ваше имя*', required='')
+                                    label.d-contacts__label
+                                        input.d-contacts__input(name='contact_form', type='tel', pattern='[0-9]+', placeholder='Номер телефона*', required='')
+                                    label.d-contacts__label
+                                        textarea(placeholder='Задайте вопрос', name='contact_form', cols='30', rows='6', onresize='none')
+                                    button.d-button.d-button--primary.d-contacts__button(type='submit') Отправить
+                                #contacts-status.d-contacts__status
+                                    p#contacts-status-text.d-contacts__statusText
+                                    button#contacts-reset.d-button.d-button--primary.d-contacts__reset Повторить
+                            .d-contacts__col.d-contacts__col--socials
+                                .d-contacts__block
+                                    ul.d-contacts__list
+                                        li.d-contacts__listItem
+                                            a.d-contacts__listItemLink(href='mailto:mydrapesdesign@gmail.com')
+                                                i.fas.fa-envelope
+                                                span mydrapesdesign@gmail.com
+                                        li.d-contacts__listItem
+                                            i.fas.fa-mobile-alt
+                                            a(href='tel:0939172079') 093 917 20 79
+                                        li.d-contacts__listItem
+                                            i.fas.fa-mobile-alt
+                                            a(href='tel:0967174810') 096 717 48 10
+                                        li.d-contacts__listItem
+                                            i.far.fa-clock
+                                            |                                     График работы:
+                                            br
+                                            | пн - вс с 10:00 до 20:00
+                                    .d-socials
+                                        ul.d-socials__list
+                                            li.d-socials__listItem.d-socials__listItem--fb
+                                                a.d-socials__listItemLink(href='https://www.facebook.com/drapesdesigns/', target='_blank', rel='nofollow')
+                                                    i.fab.fa-facebook
+                                            li.d-socials__listItem.d-socials__listItem--in
+                                                a.d-socials__listItemLink(href='https://www.instagram.com/drapesdesigns/', target='_blank', rel='nofollow')
+                                                    i.fab.fa-instagram
+                section#shipping.d-section.d-section--shipping
+                    .d-section__content
+                        h1.d-section__title Оплата и доставка
+                        h3.d-section__subtitle
+                            b Оплата
+                            |  в компании Drapesdesign осуществляется 2-мя способами:
+                        ul.d-section__list
+                            li Предоплата на карту «Приватбанк».
+                            li Наложенным платежом при получении в отделении «Новой почты».
+                        h3.d-section__subtitle
+                            b Доставка
+                            |  готовых изделий Drapesdesign осуществляется посредством транспортной компании «Новая почта» по всей Украине в течении 1-3 дней.
+            include components/footer
+
+        a.d-button.d-button--toTop.nav-link.scrollTop(href='#body')
+            span
+                i.fas.fa-chevron-up
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
+        script(src='js/script-min.js')
+        script.

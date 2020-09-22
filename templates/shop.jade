@@ -1,0 +1,61 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        title Шторы на заказ в Украине c уникальным дизайном - Drapesdesign
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='title', content='Шторы на заказ в Украине c уникальным дизайном - Drapesdesign')
+        meta(name='description', content='Шторы на заказ с уникальным дизайном на любой вкус и бюджет. Мы подбираем самые разные материалы: шифон, кристалон, органза, батист, что делает продукт доступным для всех. Доставка по всей Украине в течении 5 дней')
+        meta(name='keywords', content='Шторы на заказ недорого в Украине')
+        meta(property='og:title', content='Шторы на заказ в Украине c уникальным дизайном – Drapesdesign')
+        meta(property='og:description', content='Шторы на заказ с уникальным дизайном на любой вкус и бюджет. Мы подбираем самые разные материалы: шифон, кристалон, органза, батист, что делает продукт доступным для всех. Доставка по всей Украине в течении 5 дней')
+        meta(property='og:type', content='website')
+        meta(property='og:url', content='https://drapesdesign.com.ua/')
+        meta(property='og:site_name', content='drapesdesign.com.ua')
+        meta(property='og:image', content='images/drapesdesign_share.jpg')
+        link(rel='icon', type='image/x-icon', href='images/fav.png')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+        link(rel='stylesheet', href='styles/styles.css')
+    body#body
+        .l-wrapper
+            include components/topbar
+            include components/header
+            main
+                section.d-section
+                    .d-section__content
+                        h1.d-section__title Магазин
+                        h3.d-section__subtitle
+                            | Ниже представлены примеры работ, выполнены с использованием различных материалов: шифон, кристалон, органза, батист и декораций
+                        .d-tiles
+                            - var goods = drapesList
+                            ul.d-tiles__list
+                                each good in goods
+                                    li.d-tiles__item
+                                        .d-tiles__itemContent
+                                            span.d-tiles__itemBadge.d-tiles__itemBadge--sale -15%
+                                            a.d-button.d-button--primary.d-button--small.d-tiles__itemMoreBtn(href=good.val) Подробнее
+                                            img(src='images/shop/'+good.val+'/'+good.val+'.jpg', alt=good.title)
+                                        .d-tiles__itemInfo
+                                            h4.d-tiles__itemTitle=good.title
+                                            .d-tiles__itemPrice
+                                                span.d-tiles__itemPriceOld=good.priceOld
+                                                span.d-tiles__itemPriceNew=good.priceNew
+                                            a.d-button.d-button--inversed.d-button--small(href=good.val)
+                                                span Заказать
+                            .d-preview.js-preview.is-hidden
+                                .d-preview__nav
+                                    button.d-preview__navBtn.d-preview__navBtn--prev
+                                    button.d-preview__navBtn.d-preview__navBtn--next
+                                button.d-preview__btn.js-preview-close
+                                .d-preview__content
+                                    img.d-preview__img(src='#', alt='Preview image')
+
+            include components/footer
+
+        a.d-button.d-button--toTop.nav-link.scrollTop(href='#body')
+            span
+                i.fas.fa-chevron-up
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
+        script(src='js/script-min.js')
+        script.

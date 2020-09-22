@@ -1,0 +1,70 @@
+{ "drapesList": {
+    "violet-stripped-drapes": {
+      "val":  "violet-stripped-drapes",
+      "title": "Шторы в фиолетово-розовой расцветке в стиле геометрия",
+      "priceOld": "1500грн",
+      "priceNew": "1300грн",
+      "images": [
+        "violet-stripped-drapes.jpg",
+        "violet-stripped-drapes-base.jpg",
+        "violet-stripped-drapes-decor-base.jpg",
+        "violet-stripped-drapes-decor-decorations.jpg",
+        "violet-stripped-drapes-sticker.jpg"
+      ]
+    },
+    "red-waves-drapes": {
+      "val": "red-waves-drapes",
+      "title": "Шторы в бордовых тонах с волнистым рисунком",
+      "priceOld": "1500грн",
+      "priceNew": "1300грн",
+      "images": [
+        "red-waves-drapes.jpg"
+      ]
+    },
+    "orange-rectangle-drapes": {
+        "val": "orange-rectangle-drapes",
+        "title": "Шторы в стиле геометрия в оранжево-желтых тонах",
+        "priceOld": "1500грн",
+        "priceNew": "1300грн",
+        "images": [
+          "orange-rectangle-drapes.jpg"
+        ]
+    },
+    "brown-geometry-drapes": {
+      "val": "brown-geometry-drapes",
+      "title": "Шторы в стиле геометрия в коричнево-желтых тонах",
+      "priceOld": "1500грн",
+      "priceNew": "1300грн",
+      "images": [
+        "brown-geometry-drapes.jpg"
+      ]
+    },
+    "red-coffe-drapes": {
+      "val": "red-coffe-drapes",
+      "title": "Шторы бордового цвета с рисунком кофе для кухни",
+      "priceOld": "1500грн",
+      "priceNew": "1300грн",
+      "images": [
+        "red-coffe-drapes.jpg"
+      ]
+    },
+    "pink-yellow-flowers-drapes": {
+      "val": "pink-yellow-flowers-drapes",
+      "title": "Нежные шторы в розово-желтой расцветке с рисунком цветов",
+      "priceOld": "1500грн",
+      "priceNew": "1300грн",
+      "images": [
+        "pink-yellow-flowers-drapes.jpg"
+      ]
+    },
+    "brown-orange-stripped-drapes": {
+      "val": "brown-orange-stripped-drapes",
+      "title": "Шторы в коричнево-оранжевых тонах",
+      "priceOld": "1500грн",
+      "priceNew": "1300грн",
+      "images": [
+        "brown-orange-stripped-drapes.jpg"
+      ]
+    }
+  }
+}

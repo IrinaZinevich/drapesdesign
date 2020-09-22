@@ -1,0 +1,87 @@
+@keyframes animationRotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+
+@keyframes animationScale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes showUp {
+  0% {
+    transform: translateY(100%);
+  }
+
+  80% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes hideDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.faster {
+  animation-duration: 500ms;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}

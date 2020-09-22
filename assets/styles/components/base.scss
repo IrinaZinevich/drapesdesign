@@ -1,0 +1,156 @@
+:root {
+  --dd-color-white: #fff;
+  --dd-primary-color: #f69581;
+  --dd-secondary-color: #333333;
+  --dd-font-color: var(--dd-secondary-color);
+  --dd-font-color-light: #fff9f6;
+  --dd-link-color: var(--dd-primary-color);
+  --dd-border-color: #eeeeee;
+  --dd-color-error: #e74c3c;
+  --dd-color-success: #28a745;
+  --dd-base-border: 1px solid var(--dd-border-color);
+  --dd-font-family: 'Montserrat', Arial, sans-serif;
+  --dd-base-width: 1280px;
+  --dd-base-padding: 20px;
+}
+
+@mixin transition {
+  transition: all 0.3s ease-out;
+}
+
+@mixin phones {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin phones-excluded {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin laptops-sm {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin not-touch-devices {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin touch-devices {
+  @media (hover: none) and (pointer: coarse){
+    @content;
+  }
+}
+
+.hide-xs {
+  @include phones {
+    display: none;
+  }
+}
+
+.show-xs {
+  @include phones {
+    display: block;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--dd-font-family);
+  color: var(--dd-font-color);
+  font-weight: 400;
+  width: 100%;
+  overflow-x: auto;
+  line-height: 1.2;
+  -webkit-overflow-scrolling: touch;
+
+  &.is-modal-open {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: var(--dd-font-color);
+  text-decoration: none;
+
+  &:hover {
+    color: currentColor;
+    text-decoration: none;
+    @include transition;
+  }
+}
+
+button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input, textarea {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.d-row {
+  width: 100%;
+  border-bottom: var(--dd-base-border);
+  background-color: var(--dd-font-color-light);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    max-width: var(--dd-base-width);
+    padding: 0 var(--dd-base-padding);
+    margin: auto;
+  }
+}
+
+.d-copyright {
+  padding: 0.75rem;
+  background-color: var(--dd-font-color);
+  color: var(--dd-color-white);
+  font-size: 0.875rem;
+  text-align: center;
+}

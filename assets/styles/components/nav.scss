@@ -1,0 +1,150 @@
+.d-header__nav {
+  width: 100%;
+  height: 76px;
+  padding: 1rem 0;
+  background: rgba(255,255,255,0.95);
+  @include transition;
+
+  &Container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    padding: 0 120px;
+  }
+
+  &List {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+
+    &Item {
+      position: relative;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background-color: var(--dd-primary-color);
+        transform: scaleY(0);
+
+        @include transition;
+      }
+
+      &:before {
+        left: 0;
+        transform-origin: center bottom;
+      }
+
+      &:after {
+        right: 0;
+        transform-origin: center top;
+      }
+
+      &.is-active {
+        color: var(--dd-link-color);
+      }
+
+      @include not-touch-devices {
+        &:hover:before, &:hover:after,
+        &:hover .d-header__navLink:before, &:hover .d-header__navLink:after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &Link {
+    display: block;
+    padding: 1em;
+    font-size: 0.875em;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: currentColor;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: var(--dd-primary-color);
+      transform: scaleX(0);
+      @include transition;
+    }
+
+    &:before {
+      top: 0;
+      transform-origin: left center;
+    }
+
+    &:after {
+      bottom: 0;
+      transform-origin: right center;
+    }
+
+    @include not-touch-devices {
+      &:hover {
+        color: var(--dd-link-color);
+      }
+    }
+
+    &.is-active {
+      color: var(--dd-link-color);
+    }
+  }
+
+  &--mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(-100%, 0, 0);
+    box-shadow: 0 8px 10px -3px rgba(0,0,0,0.1);
+    font-size: 20px;
+
+    .d-header {
+      &__navList {
+        flex-direction: column;
+        margin: 0;
+        max-width: 100%;
+      }
+
+      &__contacts {
+        font-size: 18px;
+        flex-direction: column;
+        line-height: 2;
+        margin-top: 1em;
+
+        &Item {
+          margin-top: 1em;
+        }
+      }
+    }
+
+    .d-socials {
+      justify-content: center;
+      font-size: 30px;
+      margin-top: 2em;
+
+      &__listItem--in {
+        margin-left: 1em;
+      }
+    }
+
+    @include transition;
+  }
+}

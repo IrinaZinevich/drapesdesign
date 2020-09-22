@@ -1,0 +1,51 @@
+.d-features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: -2em;
+  font-size: 1rem;
+
+  @include phones {
+    font-size: 12px;
+  }
+
+  &__item {
+    text-align: center;
+    width: 11.25em;
+    height: 11.25em;
+    border: 2px solid var(--dd-primary-color);
+    border-radius: 50%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2em;
+    margin-top: 1em;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      background-color: var(--dd-primary-color);
+      color: var(--dd-color-white);
+      transform: scale(1.1);
+
+      i {
+        color: var(--dd-color-white);
+      }
+    }
+
+    &Title {
+      margin-top: 0.5em;
+      font-size: 1em;
+    }
+
+    i {
+      font-size: 4em;
+      color: var(--dd-primary-color);
+    }
+  }
+}
