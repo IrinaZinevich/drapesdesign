@@ -114,7 +114,7 @@ $(document).ready(function(){
     });
 
     modal.on('click', function (e) {
-        if($(e.target).hasClass('js-modal-close')) {
+        if($(e.target).hasClass('js-modal-close') || !$(e.target).closest('.js-modal-content').length) {
             $(this).removeClass('is-open');
             $('body').removeClass('is-modal-open');
             $(this).find('.js-contacts-form').get(0).reset();
