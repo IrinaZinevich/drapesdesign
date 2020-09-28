@@ -20,6 +20,16 @@
     }
   }
 
+  &__note {
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+
+  &__button {
+    font-weight: 400;
+    width: 100%;
+  }
+
   &__block {
     display: inline-block;
     text-align: left;
@@ -59,24 +69,20 @@
   &__label {
     display: block;
     width: 100%;
-    min-width: 300px;
     margin-bottom: 1em;
   }
-  &__input, textarea {
+
+  &__input, &__textarea {
     width: 100%;
-    padding: 0 var(--dd-base-padding);
     font-family: var(--dd-font-family);
     font-size: 1em;
     font-weight: 400;
     color: var(--dd-font-color);
     border: var(--dd-base-border);
-
-    //input:invalid:active {
-    //  border-color: #dc3545;
-    //}
+    background-color: var(--dd-color-white);
   }
 
-  textarea {
+  &__textarea {
     padding: var(--dd-base-padding);
   }
 
@@ -98,15 +104,3 @@
   }
 }
 
-
-::-webkit-input-placeholder  { /* Edge */
-  font-size: 1.5em;
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  font-size: 1em;
-}
-
-::placeholder {
-  font-size: 1em;
-}

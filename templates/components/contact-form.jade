@@ -1,0 +1,14 @@
+mixin contact-form(buttonTitle, hideTextarea)
+    form.js-contacts-form#contacts-form(action='https://formspree.io/mqkbejod', method='POST')
+        label.d-contacts__label
+            input.d-contacts__input(name='contact_form', type='text', placeholder='Как к Вам обращаться*', required)
+        label.d-contacts__label
+            input.d-contacts__input(name='contact_form', type='tel', pattern='[0-9]+', placeholder='Ваш номер телефона*', required)
+        if !hideTextarea
+            label.d-contacts__label
+                textarea.d-contacts__textarea(placeholder='Задайте вопрос', name='contact_form', cols='30', rows='6', onresize='none')
+        p.d-contacts__note *поля обязательные для заполнения
+        button.d-button.d-button--primary.d-contacts__button(type='submit')=buttonTitle
+    #contacts-status.d-contacts__status
+        p#contacts-status-text.d-contacts__statusText
+        button#contacts-reset.d-button.d-button--primary.d-contacts__reset.d-contacts__button Повторить

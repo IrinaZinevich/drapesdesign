@@ -1,0 +1,8 @@
+mixin modal(title, subtitle, buttonTitle)
+    .d-modal.js-modal
+        .d-modal__content.js-modal-content
+            button.d-modal__btn.js-modal-close
+            h4.d-modal__title=title
+            h5.d-modal__subtitle=subtitle
+            include contact-form
+            +contact-form(buttonTitle)

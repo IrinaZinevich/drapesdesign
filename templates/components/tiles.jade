@@ -1,0 +1,8 @@
+.d-tiles
+    ul.d-tiles__list
+        - for (let index = 1; index <= 46; index++)
+        li.d-tiles__item(class = index >= 29 && 'd-tiles__item--wide')
+            div.d-tiles__itemContent
+                button.d-tiles__itemBtn
+                    i.fas.fa-search
+                img(data-index=index, src='images/gallery/'+index+'.jpg', alt='Шторы на заказ Drapesdesign')

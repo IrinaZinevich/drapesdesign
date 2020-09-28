@@ -35,6 +35,71 @@
     }
   }
 
+  &--shop {
+    text-align: left;
+    background-image: url('../images/DD_hero-shop.jpg');
+
+    &:before {
+      display: none;
+    }
+
+    .d-section {
+
+      &__content {
+        padding: 30px;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgba(82, 64, 148, 0.5);
+
+        @include phones {
+          padding: 10px 0;
+        }
+      }
+
+      &__row, &__title {
+        margin-top: auto;
+      }
+
+      &__col {
+        max-width: 500px;
+      }
+    }
+  }
+
+  &__arrowBtn {
+    margin: 15px auto 0;
+    padding: 10px 20px;
+    color: var(--dd-color-white);
+
+    i {
+      font-size: 22px;
+    }
+  }
+
+  &__description {
+    text-align: left;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 600px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-around;
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
+  &__col, &__description {
+    flex: 50%;
+    padding: 20px;
+  }
+
   &--shipping {
     .d-section {
 

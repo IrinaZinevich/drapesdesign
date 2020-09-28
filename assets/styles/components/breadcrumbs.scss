@@ -1,0 +1,36 @@
+.d-breadcrumbs {
+  margin-bottom: 20px;
+  font-size: 14px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    &Item {
+      position: relative;
+
+      &:last-child {
+        font-weight: 600;
+      }
+
+      & + & {
+        &:before {
+          content: '>';
+          position: absolute;
+          font-weight: 400;
+          left: 0;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &Link {
+        padding: 0 15px;
+      }
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}

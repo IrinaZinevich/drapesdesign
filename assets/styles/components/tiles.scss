@@ -101,29 +101,25 @@
       }
 
       &:hover:before {
-        @include phones-excluded {
-          opacity: 1;
-          visibility: visible;
-        }
+        opacity: 1;
+        visibility: visible;
       }
 
       &:hover {
-        @include phones-excluded {
-          img {
-            transform: scale(1.15);
-          }
+        img {
+          transform: scale(1.15);
+        }
 
-          .d-tiles__itemBtn {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            color: var(--dd-color-white);
-          }
+        .d-tiles__itemBtn {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          color: var(--dd-color-white);
+        }
 
-          .d-tiles__itemMoreBtn {
-            opacity: 1;
-            visibility: visible;
-          }
+        .d-tiles__itemMoreBtn {
+          opacity: 1;
+          visibility: visible;
         }
       }
     }

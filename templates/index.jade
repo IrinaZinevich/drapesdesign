@@ -85,13 +85,7 @@ html(lang='ru')
                                             button.d-tiles__itemBtn
                                                 i.fas.fa-search
                                             img(data-index=index, src='images/gallery/'+index+'.jpg', alt='Шторы на заказ Drapesdesign')
-                            .d-preview.js-preview.is-hidden
-                                .d-preview__nav
-                                    button.d-preview__navBtn.d-preview__navBtn--prev
-                                    button.d-preview__navBtn.d-preview__navBtn--next
-                                button.d-preview__btn.js-preview-close
-                                .d-preview__content
-                                    img.d-preview__img(src='#', alt='Preview image')
+                            include components/preview
                         // <div class="d-slider">
                         // <div class="d-slider__content">
                         // <div class="swiper-container">
@@ -132,17 +126,8 @@ html(lang='ru')
                             | Заполните форму обратной связи и наш менеджер свяжется с Вами в ближайшее время или воспользуйтесь контактными данными, чтобы сделать заказ или для уточнения деталей
                         .d-contacts
                             .d-contacts__col
-                                form#contacts-form(action='https://formspree.io/mqkbejod', method='POST')
-                                    label.d-contacts__label
-                                        input.d-contacts__input(name='contact_form', type='text', placeholder='Ваше имя*', required='')
-                                    label.d-contacts__label
-                                        input.d-contacts__input(name='contact_form', type='tel', pattern='[0-9]+', placeholder='Номер телефона*', required='')
-                                    label.d-contacts__label
-                                        textarea(placeholder='Задайте вопрос', name='contact_form', cols='30', rows='6', onresize='none')
-                                    button.d-button.d-button--primary.d-contacts__button(type='submit') Отправить
-                                #contacts-status.d-contacts__status
-                                    p#contacts-status-text.d-contacts__statusText
-                                    button#contacts-reset.d-button.d-button--primary.d-contacts__reset Повторить
+                                include components/contact-form
+                                +contact-form('Оставить заявку')
                             .d-contacts__col.d-contacts__col--socials
                                 .d-contacts__block
                                     ul.d-contacts__list

@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", function() {
         form.style = "display: none";
         status.style = "display: block";
         statusText.style.color = "#28a745";
-        statusText.innerHTML = "Данные успешно отправлнены! В ближайшее время с Вами свядется наш менеджер для уточнения деталей.";
+        statusText.innerHTML = "Данные успешно отправлнены!";
     }
 
     function error() {
@@ -97,6 +97,8 @@ $(document).ready(function(){
     var copyrightYear = $('.d-copyright__year');
     var itemTile = $('.d-tiles__item');
     var preview = $('.js-preview');
+    var modal = $('.js-modal');
+    var modalOpenBtn = $('.js-modal-open');
     var navPreviewBtn = preview.find('.d-preview__navBtn');
     var isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
     var currentYear = (new Date()).getFullYear();
@@ -106,12 +108,25 @@ $(document).ready(function(){
 
     copyrightYear.text(currentYear);
 
+    modalOpenBtn.on('click', function () {
+        modal.addClass('is-open');
+        $('body').addClass('is-modal-open');
+    });
+
+    modal.on('click', function (e) {
+        if($(e.target).hasClass('js-modal-close')) {
+            $(this).removeClass('is-open');
+            $('body').removeClass('is-modal-open');
+            $(this).find('.js-contacts-form').get(0).reset();
+        }
+    });
+
     menuLink.on('click', function(e){
-        e.preventDefault();
+        // e.preventDefault();
         menuLink.removeClass('is-active');
         $(this).addClass('is-active');
-        var linkOffset = $($(this).attr('href')).offset().top - navHeight + 20;
-        $('html,body').animate({ scrollTop: linkOffset },500);
+        // var linkOffset = $($(this).attr('href')).offset().top - navHeight + 20;
+        // $('html,body').animate({ scrollTop: linkOffset },500);
 
         menuBtn.removeClass('is-active');
         mobileNav.removeClass('slideInLeft');

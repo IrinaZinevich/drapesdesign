@@ -1,0 +1,9 @@
+mixin breadcrumbs(pageTitle)
+    .d-breadcrumbs
+        ul.d-breadcrumbs__list
+            li.d-breadcrumbs__listItem
+                a.d-breadcrumbs__listItemLink(href="https://www.drapesdesign.com.ua/")
+                    i.fas.fa-home
+                    | Главная
+            li.d-breadcrumbs__listItem
+                a.d-breadcrumbs__listItemLink=pageTitle

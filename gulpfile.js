@@ -20,7 +20,7 @@ function style() {
 }
 
 function tpl() {
-    return gulp.src('./templates/*.jade')
+    return gulp.src('./templates/**/*.jade')
         .pipe(data( function(file) {
             return JSON.parse(
                 fs.readFileSync('./data.json' , { encoding: 'utf8' })

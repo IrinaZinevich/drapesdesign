@@ -20,12 +20,28 @@ html(lang='ru')
         .l-wrapper
             include components/topbar
             include components/header
+            include components/modal
+            +modal('Сделать заказ', 'Оставьте контактные данные и мы свяжемся с Вами в ближайшее время для для выяснения деталей заказа', 'Отправить')
+            //+modal('Оставить заявку', 'Оставьте контактные данные и мы свяжемся с Вами в ближайшее время для для выяснения деталей заказа', 'Оставить заявку')
             main
-                section.d-section
+                section.d-section.d-section--hero.d-section--shop
                     .d-section__content
-                        h1.d-section__title Магазин
-                        h3.d-section__subtitle
-                            | Ниже представлены примеры работ, выполнены с использованием различных материалов: шифон, кристалон, органза, батист и декораций
+                        h1.d-section__title Магазин готовых изделий
+                        .d-section__row
+                            h3.d-section__description
+                                | В магазине представлены готовые модели штор, которые можно приобрести прямо сейчас с доставкой на дом, а также заказать бесплатную установку на карниз.
+                                br
+                                br
+                                | Если среди представленных моделей не нашлось подходящей, воспользуйтесь контактной формой, чтобы оставить заявку на разработку индивидуального пошива.
+                            .d-section__col
+                                include components/contact-form
+                                +contact-form('Оставить заявку', true)
+                        a.d-section__arrowBtn(href="#goods")
+                            i.fas.fa-arrow-down.animated.bounceDown.infinite
+                section.d-section#goods
+                    include components/breadcrumbs
+                    +breadcrumbs('Магазин')
+                    .d-section__content
                         .d-tiles
                             - var goods = drapesList
                             ul.d-tiles__list
@@ -33,14 +49,14 @@ html(lang='ru')
                                     li.d-tiles__item
                                         .d-tiles__itemContent
                                             span.d-tiles__itemBadge.d-tiles__itemBadge--sale -15%
-                                            a.d-button.d-button--primary.d-button--small.d-tiles__itemMoreBtn(href=good.val) Подробнее
+                                            a.d-button.d-button--primary.d-button--small.d-tiles__itemMoreBtn.js-modal-open Подробнее
                                             img(src='images/shop/'+good.val+'/'+good.val+'.jpg', alt=good.title)
                                         .d-tiles__itemInfo
                                             h4.d-tiles__itemTitle=good.title
                                             .d-tiles__itemPrice
                                                 span.d-tiles__itemPriceOld=good.priceOld
                                                 span.d-tiles__itemPriceNew=good.priceNew
-                                            a.d-button.d-button--inversed.d-button--small(href=good.val)
+                                            a.d-button.d-button--inversed.d-button--small.js-modal-open
                                                 span Заказать
                             .d-preview.js-preview.is-hidden
                                 .d-preview__nav
@@ -51,7 +67,6 @@ html(lang='ru')
                                     img.d-preview__img(src='#', alt='Preview image')
 
             include components/footer
-
         a.d-button.d-button--toTop.nav-link.scrollTop(href='#body')
             span
                 i.fas.fa-chevron-up
