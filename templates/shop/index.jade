@@ -13,16 +13,15 @@ html(lang='ru')
         meta(property='og:url', content='https://drapesdesign.com.ua/')
         meta(property='og:site_name', content='drapesdesign.com.ua')
         meta(property='og:image', content='images/drapesdesign_share.jpg')
-        link(rel='icon', type='image/x-icon', href='images/fav.png')
+        link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
         link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
-        link(rel='stylesheet', href='styles/styles.css')
+        link(rel='stylesheet', href='../styles/styles.css')
     body#body
         .l-wrapper
-            include components/topbar
-            include components/header
-            include components/modal
+            include ../components/topbar
+            include ../components/header
+            include ../components/modal
             +modal('Сделать заказ', 'Оставьте контактные данные и мы свяжемся с Вами в ближайшее время для для выяснения деталей заказа', 'Отправить')
-            //+modal('Оставить заявку', 'Оставьте контактные данные и мы свяжемся с Вами в ближайшее время для для выяснения деталей заказа', 'Оставить заявку')
             main
                 section.d-section.d-section--hero.d-section--shop
                     .d-section__content
@@ -34,12 +33,14 @@ html(lang='ru')
                                 br
                                 | Если среди представленных моделей не нашлось подходящей, воспользуйтесь контактной формой, чтобы оставить заявку на разработку индивидуального пошива.
                             .d-section__col
-                                include components/contact-form
+                                include ../components/contact-form
                                 +contact-form('Оставить заявку', true)
                         a.d-section__arrowBtn(href="#goods")
                             i.fas.fa-arrow-down.animated.bounceDown.infinite
                 section.d-section#goods
-                    include components/breadcrumbs
+                    include ../components/banner
+                    include ../components/breadcrumbs
+                    +banner('Скидки только до конца осени на модели с отметкой -15%. Акция действует до 30.11.2020. ', '#')
                     +breadcrumbs('Магазин')
                     .d-section__content
                         .d-tiles
@@ -49,8 +50,8 @@ html(lang='ru')
                                     li.d-tiles__item
                                         .d-tiles__itemContent
                                             span.d-tiles__itemBadge.d-tiles__itemBadge--sale -15%
-                                            a.d-button.d-button--primary.d-button--small.d-tiles__itemMoreBtn.js-modal-open Подробнее
-                                            img(src='images/shop/'+good.val+'/'+good.val+'.jpg', alt=good.title)
+                                            a.d-button.d-button--primary.d-button--small.d-tiles__itemMoreBtn(href='https://www.drapesdesign.com.ua/shop/'+good.val) Подробнее
+                                            img(src='https://www.drapesdesign.com.ua/images/shop/'+good.val+'/'+good.val+'.jpg', alt=good.title)
                                         .d-tiles__itemInfo
                                             h4.d-tiles__itemTitle=good.title
                                             .d-tiles__itemPrice
@@ -66,11 +67,11 @@ html(lang='ru')
                                 .d-preview__content
                                     img.d-preview__img(src='#', alt='Preview image')
 
-            include components/footer
+            include ../components/footer
         a.d-button.d-button--toTop.nav-link.scrollTop(href='#body')
             span
                 i.fas.fa-chevron-up
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
         script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
-        script(src='js/script-min.js')
+        script(src='../js/script-min.js')
         script.

@@ -1,4 +1,4 @@
-mixin breadcrumbs(pageTitle)
+mixin breadcrumbs(mainPage, goodPage)
     .d-breadcrumbs
         ul.d-breadcrumbs__list
             li.d-breadcrumbs__listItem
@@ -6,4 +6,7 @@ mixin breadcrumbs(pageTitle)
                     i.fas.fa-home
                     | Главная
             li.d-breadcrumbs__listItem
-                a.d-breadcrumbs__listItemLink=pageTitle
+                a.d-breadcrumbs__listItemLink(href="https://www.drapesdesign.com.ua/shop")=mainPage
+            if goodPage
+                li.d-breadcrumbs__listItem
+                    a.d-breadcrumbs__listItemLink=goodPage

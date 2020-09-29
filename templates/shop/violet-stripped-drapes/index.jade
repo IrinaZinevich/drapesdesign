@@ -1,0 +1,40 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        title Шторы на заказ в Украине c уникальным дизайном - Drapesdesign
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='title', content='Шторы на заказ в Украине c уникальным дизайном - Drapesdesign')
+        meta(name='description', content='Шторы на заказ с уникальным дизайном на любой вкус и бюджет. Мы подбираем самые разные материалы: шифон, кристалон, органза, батист, что делает продукт доступным для всех. Доставка по всей Украине в течении 5 дней')
+        meta(name='keywords', content='Шторы на заказ недорого в Украине')
+        meta(property='og:title', content='Шторы на заказ в Украине c уникальным дизайном – Drapesdesign')
+        meta(property='og:description', content='Шторы на заказ с уникальным дизайном на любой вкус и бюджет. Мы подбираем самые разные материалы: шифон, кристалон, органза, батист, что делает продукт доступным для всех. Доставка по всей Украине в течении 5 дней')
+        meta(property='og:type', content='website')
+        meta(property='og:url', content='https://drapesdesign.com.ua/')
+        meta(property='og:site_name', content='drapesdesign.com.ua')
+        meta(property='og:image', content='images/drapesdesign_share.jpg')
+        link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+        link(rel='stylesheet', href='../../styles/styles.css')
+    body#body
+        .l-wrapper
+            include ../../components/topbar
+            include ../../components/header
+            include ../../components/modal
+            include ../../components/banner
+            include ../../components/breadcrumbs
+            +modal('Сделать заказ', 'Оставьте контактные данные и мы свяжемся с Вами в ближайшее время для для выяснения деталей заказа', 'Отправить')
+            main
+            +banner('У нас действуют постоянные скидки: -20% на второе окно и -30% на третье. ', '#')
+            +breadcrumbs('Магазин', 'Шторы в фиолетово-розовой расцветке в стиле геометрия')
+            .d-section
+                include ../../components/product
+            include ../../components/footer
+
+        a.d-button.d-button--toTop.nav-link.scrollTop(href='#body')
+            span
+                i.fas.fa-chevron-up
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
+        script(src='../../js/script-min.js')
+        script.

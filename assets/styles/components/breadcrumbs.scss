@@ -10,7 +10,10 @@
       position: relative;
 
       &:last-child {
-        font-weight: 600;
+        a {
+          pointer-events: none;
+          opacity: 0.5;
+        }
       }
 
       & + & {
