@@ -1,15 +1,51 @@
-.d-product
-    .d-product__row
-        .d-product__col
-        .d-product__col
-            h1.d-product__title Шторы в фиолетово-розовой расцветке в стиле геометрия
-            h2.d-product__description
-                | Каждому хочется сделать свой дом уголком покоя, тепла и уюта. Важную роль в этом играет не только интерьер, а и декорация окон.
-                | Гардины в золотисто-бежевых и оранжевых тонах, гармонично дополняя друг друга, наполняют пространство необычной жизненной энергией и силой, производят потрясающий эффект. В такой комнате всегда будет много света и солнца.
-                | Тёплые и уютные оттенки вызывают жизнерадостные ощущения, позитивное настроение и самочувствие.
-                | Мягкое, не контрастное, сочетание золотисто-бежевых волн-полосок на лёгкой органзе вместе с белым шифоном располагают к мечтательной,  загадочной атмосфере, в которой приятно находиться, а декорации-ромбики придают выразительности, экзотичности, изысканности и привлекательности...
-            .d-product__Info
-                p Характеристики
-                dl
-                    dt Размер
-                    dt 2м х 2м
+mixin product(productName)
+    - var product = drapesList[productName]
+    .d-product
+        .d-product__row
+            .d-product__col
+                .hide.show-xs
+                    h1.d-product__title=product.title
+                    .d-product__priceWrapper
+                        .d-product__price
+                            span.d-product__priceOld=product.priceOld
+                            span.d-product__priceNew=product.priceNew
+                        .d-product__discount=product.status
+                    a.d-button.d-button--primary.d-button--md.js-modal-open
+                        span Купить
+                .d-product__slider
+                    .swiper-container.gallery-top
+                        span.d-badge.d-badge--sale=product.badge
+                        .swiper-wrapper
+                            each val in product.images
+                                .swiper-slide
+                                    img(src='../../images/shop/'+productName+'/'+val)
+                        .swiper-button-next.swiper-button-white.hide-xs
+                        .swiper-button-prev.swiper-button-white.hide-xs
+                    .swiper-container.gallery-thumbs
+                        .swiper-wrapper
+                            each val in product.images
+                                .swiper-slide
+                                    img(src='../../images/shop/' + productName + '/' + val)
+            .d-product__col
+                .hide-xs
+                    h1.d-product__title=product.title
+                    .d-product__priceWrapper
+                        .d-product__price
+                            span.d-product__priceOld=product.priceOld
+                            span.d-product__priceNew=product.priceNew
+                        .d-product__discount=product.status
+                    a.d-button.d-button--primary.d-button--md.js-modal-open
+                        span Купить
+                .d-tabs.d-product__tabs.js-tabs
+                    ul.d-tabs__nav
+                        li.d-tabs__navItem
+                            a.d-tabs__navItemLink.is-active.js-tabs-link(href="#" data-link="description") Описание
+                        li.d-tabs__navItem
+                            a.d-tabs__navItemLink.js-tabs-link(href="#" data-link="characteristics") Характеристики
+                     .d-tabs__content
+                         div.d-tabs__block.js-tabs-block#description=product.description
+                         div.d-tabs__block.js-tabs-block#characteristics(style="display:none")
+                             dl.d-tabs__definitions
+                                each val in product.details
+                                    dt=Object.keys(val)
+                                    dd=Object.values(val)

@@ -24,25 +24,6 @@
       flex-basis: 100%;
     }
 
-    &Badge {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 5px 7px;
-      font-weight: bold;
-      z-index: 1;
-      color: var(--dd-color-white);
-      border-bottom-right-radius: 5px;
-
-      &--sale {
-        background: var(--dd-color-error);
-      }
-
-      &--new {
-        background: var(--dd-color-success);
-      }
-    }
-
     &Title {
       margin: 15px 0;
       font-size: 16px;

@@ -99,6 +99,7 @@ $(document).ready(function(){
     var preview = $('.js-preview');
     var modal = $('.js-modal');
     var modalOpenBtn = $('.js-modal-open');
+    var tabs = $('.js-tabs');
     var navPreviewBtn = preview.find('.d-preview__navBtn');
     var isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
     var currentYear = (new Date()).getFullYear();
@@ -209,4 +210,18 @@ $(document).ready(function(){
         var windowTop = $(window).scrollTop();
         windowTop > mainPageOffset - navHeight ? header.addClass('d-header--fixed') : header.removeClass('d-header--fixed');
     }
+
+    //tabs
+
+    tabs.find('.js-tabs-link').on('click', function (e) {
+        var container = $(this).parents('.js-tabs');
+        e.preventDefault();
+        if($(this).hasClass('is-active')){
+            return;
+        }
+        container.find('.js-tabs-link').removeClass('is-active');
+        container.find('.js-tabs-block').fadeOut(300);
+        $(this).addClass('is-active');
+        container.find('#'+$(this).attr('data-link')).fadeIn(300);
+    })
 });

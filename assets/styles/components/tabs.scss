@@ -1,0 +1,66 @@
+.d-tabs {
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    border-bottom: var(--dd-base-border);
+    font-weight: 500;
+
+    &Item {
+      margin-bottom: -1px;
+
+      @include phones {
+        flex: 1;
+      }
+
+      &Link {
+        display: block;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        border-top-width: 2px;
+        border-radius: 3px;
+        text-align: center;
+
+        @include phones {
+          padding: 15px 10px;
+        }
+
+        &.is-active {
+          background-color: var(--dd-color-white);
+          border-color: var(--dd-primary-color) var(--dd-border-color) var(--dd-color-white);
+        }
+      }
+    }
+  }
+
+  &__content {
+    font-size: 15px;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  &__block {
+    padding: 20px;
+
+    @include phones {
+      padding: 20px 0;
+    }
+  }
+
+  &__definitions {
+    dt {
+      float: left;
+      width: 40%;
+      min-width: 150px;
+      font-weight: 600;
+      padding-right: 10px;
+    }
+
+    dd {
+      border-bottom: 1px dashed var(--dd-primary-color);
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      font-weight: 500;
+    }
+  }
+}

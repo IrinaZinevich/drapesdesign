@@ -35,30 +35,30 @@ html(lang='ru')
                             .d-section__col
                                 include ../components/contact-form
                                 +contact-form('Оставить заявку', true)
-                        a.d-section__arrowBtn(href="#goods")
+                        a.d-section__arrowBtn(href="#products")
                             i.fas.fa-arrow-down.animated.bounceDown.infinite
-                section.d-section#goods
+                section.d-section#products
                     include ../components/banner
                     include ../components/breadcrumbs
                     +banner('Скидки только до конца осени на модели с отметкой -15%. Акция действует до 30.11.2020. ', '#')
                     +breadcrumbs('Магазин')
                     .d-section__content
                         .d-tiles
-                            - var goods = drapesList
+                            - var products = drapesList
                             ul.d-tiles__list
-                                each good in goods
+                                each product in products
                                     li.d-tiles__item
                                         .d-tiles__itemContent
-                                            span.d-tiles__itemBadge.d-tiles__itemBadge--sale -15%
-                                            a.d-button.d-button--primary.d-button--small.d-tiles__itemMoreBtn(href='https://www.drapesdesign.com.ua/shop/'+good.val) Подробнее
-                                            img(src='https://www.drapesdesign.com.ua/images/shop/'+good.val+'/'+good.val+'.jpg', alt=good.title)
+                                            span.d-badge.d-badge--sale -15%
+                                            a.d-button.d-button--primary.d-button--small.d-tiles__itemMoreBtn(href='https://www.drapesdesign.com.ua/shop/'+product.val) Подробнее
+                                            img(src='../images/shop/'+product.val+'/'+product.images[0], alt=product.title)
                                         .d-tiles__itemInfo
-                                            h4.d-tiles__itemTitle=good.title
+                                            h4.d-tiles__itemTitle=product.title
                                             .d-tiles__itemPrice
-                                                span.d-tiles__itemPriceOld=good.priceOld
-                                                span.d-tiles__itemPriceNew=good.priceNew
+                                                span.d-tiles__itemPriceOld=product.priceOld
+                                                span.d-tiles__itemPriceNew=product.priceNew
                                             a.d-button.d-button--inversed.d-button--small.js-modal-open
-                                                span Заказать
+                                                span Купить
                             .d-preview.js-preview.is-hidden
                                 .d-preview__nav
                                     button.d-preview__navBtn.d-preview__navBtn--prev

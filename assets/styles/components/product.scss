@@ -1,2 +1,97 @@
 .d-product {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__slider {
+    --swiper-navigation-size: 24px;
+
+    @include phones {
+      width: 100vw;
+      margin: 30px -20px 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin: -15px;
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    flex-basis: 50%;
+    padding: 15px;
+    overflow: hidden;
+
+    &:first-child {
+      max-width: 500px;
+    }
+
+    @include phones {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+
+    @include phones {
+      font-size: 22px;
+    }
+  }
+
+  &__description {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &__price, &__discount {
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    font-size: 22px;
+    font-weight: bold;
+
+    &Wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &Title {
+      margin-right: 10px;
+    }
+
+    &Old {
+      text-decoration: line-through;
+      margin-right: 10px;
+      font-weight: 400;
+    }
+
+    &New {
+      margin-right: 20px;
+    }
+  }
+
+  &__discount {
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    @extend .d-stub-green;
+  }
+
+  &__tabs {
+    margin-top: 40px;
+
+    @include phones {
+      margin-top: 10px;
+    }
+  }
 }

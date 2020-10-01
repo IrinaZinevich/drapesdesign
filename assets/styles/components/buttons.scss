@@ -85,10 +85,19 @@
   &--primary {
     background-color: var(--dd-button-primary-color);
     color: var(--dd-color-white);
+
+    &:hover {
+      color: var(--dd-color-white);
+    }
   }
 
   &--small {
     padding: 10px 15px;
     font-size: 13px;
+  }
+
+  &--md {
+    padding: 15px 40px;
+    font-size: 16px;
   }
 }

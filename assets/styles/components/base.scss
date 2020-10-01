@@ -54,6 +54,10 @@
   }
 }
 
+.hide {
+  display: none;
+}
+
 .hide-xs {
   @include phones {
     display: none;
@@ -74,6 +78,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 html {
@@ -94,6 +99,10 @@ body {
   &.is-modal-open {
     overflow: hidden;
   }
+}
+
+.l-wrapper {
+  height: 100%;
 }
 
 a {
@@ -156,6 +165,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+dt, dd {
+  margin: 0;
+}
+
 .d-row {
   width: 100%;
   border-bottom: var(--dd-base-border);
@@ -177,4 +190,36 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--dd-color-white);
   font-size: 0.875rem;
   text-align: center;
+}
+
+.d-stub-green {
+  color: #21973c;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.d-stub-red {
+  color: #e94655;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.d-badge {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 7px;
+  font-weight: bold;
+  z-index: 5;
+  color: var(--dd-color-white);
+  border-bottom-right-radius: 5px;
+
+  &--sale {
+    background: var(--dd-color-error);
+  }
+
+  &--new {
+    background: var(--dd-color-success);
+  }
 }

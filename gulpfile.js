@@ -19,8 +19,14 @@ function style() {
         .pipe(browserSync.stream());
 }
 
+function styleLibs() {
+    return gulp.src('assets/styles/libs/*.css')
+        .pipe(gulp.dest('app/styles/libs'))
+        .pipe(browserSync.stream());
+}
+
 function tpl() {
-    return gulp.src('./templates/**/*.jade')
+    return gulp.src('./templates/**/**/*.jade')
         .pipe(data( function(file) {
             return JSON.parse(
                 fs.readFileSync('./data.json' , { encoding: 'utf8' })
@@ -40,10 +46,17 @@ function images() {
 }
 
 function scripts() {
-    return gulp.src(['assets/js/script.js'])
-        .pipe(concat('script.js')) // Собираем все JS, кроме тех которые находятся в ./assets/js/vendor/**
+    return gulp.src('assets/js/*.js')
+        // .pipe(concat('script.js')) // Собираем все JS, кроме тех которые находятся в ./assets/js/vendor/**
         .pipe(minify())
         .pipe(gulp.dest('app/js'))
+        .pipe(browserSync.stream()); // даем команду на перезагрузку страницы
+}
+
+function scriptsLibs() {
+    return gulp.src('assets/js/libs/**/*.js')
+        .pipe(minify())
+        .pipe(gulp.dest('app/js/libs'))
         .pipe(browserSync.stream()); // даем команду на перезагрузку страницы
 }
 
@@ -54,13 +67,17 @@ function watch() {
         }
     });
     gulp.watch('./assets/styles/**/*.scss', style);
+    gulp.watch('./assets/styles/libs/*.css', styleLibs);
     gulp.watch('./templates/**/*.jade', tpl);
     gulp.watch('./assets/js/*.js', scripts);
+    gulp.watch('./assets/js/libs/*.js', scriptsLibs);
     gulp.watch('./assets/images/**/*.+(png|jpg|svg)', images);
 
 }
 exports.tpl = tpl;
 exports.style = style;
+exports.styleLibs = styleLibs;
 exports.scripts = scripts;
+exports.scriptsLibs = scriptsLibs;
 exports.images = images;
 exports.watch = watch;
