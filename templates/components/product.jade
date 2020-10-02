@@ -9,8 +9,11 @@ mixin product(productName)
                         .d-product__price
                             span.d-product__priceOld=product.priceOld
                             span.d-product__priceNew=product.priceNew
-                        .d-product__discount=product.status
-                    a.d-button.d-button--primary.d-button--md.js-modal-open
+                        .d-product__discount
+                            i.far.fa-check-circle
+                            span=product.status
+                    a.d-button.d-button--primary.d-button--icon.d-button--lg.js-modal-open
+                        i.fas.fa-shopping-cart
                         span Купить
                 .d-product__slider
                     .swiper-container.gallery-top
@@ -33,8 +36,11 @@ mixin product(productName)
                         .d-product__price
                             span.d-product__priceOld=product.priceOld
                             span.d-product__priceNew=product.priceNew
-                        .d-product__discount=product.status
-                    a.d-button.d-button--primary.d-button--md.js-modal-open
+                        .d-product__discount
+                            i.far.fa-check-circle
+                            span=product.status
+                    a.d-button.d-button--primary.d-button--icon.d-button--lg.js-modal-open
+                        i.fas.fa-shopping-cart
                         span Купить
                 .d-tabs.d-product__tabs.js-tabs
                     ul.d-tabs__nav

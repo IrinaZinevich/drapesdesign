@@ -48,19 +48,24 @@
   }
 
   &__definitions {
+    display: flex;
+    flex-wrap: wrap;
+
     dt {
-      float: left;
-      width: 40%;
-      min-width: 150px;
+      flex: 0 0 40%;
       font-weight: 600;
       padding-right: 10px;
     }
 
     dd {
+      flex: 0 0 60%;
+      font-weight: 500;
+    }
+
+    dt, dd {
       border-bottom: 1px dashed var(--dd-primary-color);
       margin-bottom: 10px;
       padding-bottom: 10px;
-      font-weight: 500;
     }
   }
 }

@@ -146,10 +146,12 @@ $(document).ready(function(){
             menuBtn.addClass('is-active');
             mobileNav.removeClass('slideOutLeft');
             mobileNav.addClass('animated slideInLeft');
+            $('body').addClass('is-modal-open');
         } else {
             menuBtn.removeClass('is-active');
             mobileNav.removeClass('slideInLeft');
             mobileNav.addClass('animated slideOutLeft');
+            $('body').removeClass('is-modal-open');
         }
     });
 

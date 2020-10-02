@@ -57,7 +57,8 @@ html(lang='ru')
                                             .d-tiles__itemPrice
                                                 span.d-tiles__itemPriceOld=product.priceOld
                                                 span.d-tiles__itemPriceNew=product.priceNew
-                                            a.d-button.d-button--inversed.d-button--small.js-modal-open
+                                            a.d-button.d-button--inversed.d-button--icon.js-modal-open
+                                                i.fas.fa-shopping-cart
                                                 span Купить
                             .d-preview.js-preview.is-hidden
                                 .d-preview__nav
@@ -66,7 +67,6 @@ html(lang='ru')
                                 button.d-preview__btn.js-preview-close
                                 .d-preview__content
                                     img.d-preview__img(src='#', alt='Preview image')
-
             include ../components/footer
         a.d-button.d-button--toTop.nav-link.scrollTop(href='#body')
             span
