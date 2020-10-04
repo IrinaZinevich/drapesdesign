@@ -28,6 +28,12 @@
   &__button {
     font-weight: 400;
     width: 100%;
+
+    &:hover {
+      background-color: var(--dd-primary-hover-color);
+      color: var(--dd-color-white);
+      border-color: var(--dd-primary-hover-color);
+    }
   }
 
   &__block {
