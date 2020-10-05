@@ -4,8 +4,15 @@
       "title": "Шторы в фиолетово-розовой расцветке в стиле геометрия",
       "priceOld": "1500грн",
       "priceNew": "1300грн",
-      "status": "В наличии",
-      "badge": "-15%",
+      "status": {
+        "available": true,
+        "title": "В наличии"
+      },
+      "badge": {
+        "type": "sale",
+        "title": "-15%"
+      },
+      "action": "Купить",
       "images": [
         "drapes-main.jpg",
         "drapes-base.jpg",
@@ -29,8 +36,15 @@
       "title": "Шторы в бордовых тонах с волнистым рисунком",
       "priceOld": "1500грн",
       "priceNew": "1300грн",
-      "status": "В наличии",
-      "badge": "-15%",
+      "status": {
+        "available": true,
+        "title": "В наличии"
+      },
+      "badge": {
+        "type": "sale",
+        "title": "-15%"
+      },
+      "action": "Купить",
       "images": [
         "drapes-main.jpg",
         "drapes-base.jpg",
@@ -55,8 +69,15 @@
         "title": "Шторы в стиле геометрия в оранжево-желтых тонах",
         "priceOld": "1500грн",
         "priceNew": "1300грн",
-        "status": "В наличии",
-        "badge": "-15%",
+        "status": {
+          "available": true,
+          "title": "В наличии"
+        },
+        "badge": {
+          "type": "sale",
+          "title": "-15%"
+        },
+        "action": "Купить",
         "images": [
           "drapes-main.jpg",
           "drapes-base.jpg",
@@ -78,10 +99,17 @@
     "brown-geometry-drapes": {
       "val": "brown-geometry-drapes",
       "title": "Шторы в стиле геометрия в коричнево-желтых тонах",
-      "priceOld": "1500грн",
-      "priceNew": "1300грн",
-      "status": "В наличии",
-      "badge": "-15%",
+      "priceOld": "",
+      "priceNew": "",
+      "status": {
+        "available": false,
+        "title": "На текущий момент модель доступна только под индивидиальный пошив. Воспользуйтесь кнопкой ЗАКАЗАТЬ для размещения заявки."
+      },
+      "badge": {
+        "type": "sale",
+        "title": "Нет в наличии"
+      },
+      "action": "Заказать",
       "images": [
         "drapes-main.jpg",
         "drapes-base.jpg",
@@ -106,8 +134,15 @@
       "title": "Шторы бордового цвета с рисунком кофе для кухни",
       "priceOld": "1500грн",
       "priceNew": "1300грн",
-      "status": "В наличии",
-      "badge": "-15%",
+      "status": {
+        "available": true,
+        "title": "В наличии"
+      },
+      "badge": {
+        "type": "sale",
+        "title": "-15%"
+      },
+      "action": "Купить",
       "images": [
         "drapes-main.jpg",
         "drapes-base.jpg",
@@ -132,8 +167,15 @@
       "title": "Нежные шторы в розово-желтой расцветке с рисунком цветов",
       "priceOld": "1500грн",
       "priceNew": "1300грн",
-      "status": "В наличии",
-      "badge": "-15%",
+      "status": {
+        "available": true,
+        "title": "В наличии"
+      },
+      "badge": {
+        "type": "sale",
+        "title": "-15%"
+      },
+      "action": "Купить",
       "images": [
         "drapes-main.jpg",
         "drapes-base.jpg",
@@ -159,8 +201,15 @@
       "title": "Шторы в коричнево-оранжевых тонах",
       "priceOld": "1500грн",
       "priceNew": "1300грн",
-      "status": "В наличии",
-      "badge": "-15%",
+      "status": {
+        "available": true,
+        "title": "В наличии"
+      },
+      "badge": {
+        "type": "sale",
+        "title": "-15%"
+      },
+      "action": "Купить",
       "images": [
         "drapes-main.jpg",
         "drapes-base.jpg",

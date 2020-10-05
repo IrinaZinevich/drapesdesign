@@ -49,7 +49,7 @@ html(lang='ru')
                                 each product in products
                                     li.d-tiles__item
                                         .d-tiles__itemContent
-                                            span.d-badge.d-badge--sale -15%
+                                            span(class="d-badge d-badge--"+ product.badge.type)=product.badge.title
                                             a.d-button.d-button--primary.d-button--small.d-tiles__itemMoreBtn(href='https://www.drapesdesign.com.ua/shop/'+product.val) Подробнее
                                             img(src='../images/shop/'+product.val+'/'+product.images[0], alt=product.title)
                                         .d-tiles__itemInfo
@@ -59,7 +59,7 @@ html(lang='ru')
                                                 span.d-tiles__itemPriceNew=product.priceNew
                                             a.d-button.d-button--inversed.d-button--icon.js-modal-open
                                                 i.fas.fa-shopping-cart
-                                                span Купить
+                                                span=product.action
                             .d-preview.js-preview.is-hidden
                                 .d-preview__nav
                                     button.d-preview__navBtn.d-preview__navBtn--prev

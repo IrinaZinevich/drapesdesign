@@ -50,7 +50,7 @@
     line-height: 1.5;
   }
 
-  &__price, &__discount {
+  &__price, &__status {
     margin-bottom: 30px;
   }
 
@@ -87,12 +87,20 @@
     }
   }
 
-  &__discount {
-    padding: 10px 15px;
+  &__status {
+    padding: 8px 15px;
     border-radius: 3px;
     font-size: 14px;
     font-weight: 500;
-    @extend .d-stub-green;
+    line-height: 1.5;
+
+    &--success {
+      @extend .d-stub-green;
+    }
+
+    &--error {
+      @extend .d-stub-red;
+    }
 
     i {
       margin-right: 8px;

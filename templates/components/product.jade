@@ -1,24 +1,29 @@
 mixin product(productName)
     - var product = drapesList[productName]
     .d-product
-
         .d-product__row
             .d-product__col
                 .hide.show-xs
                     h1.d-product__title=product.title
                     .d-product__priceWrapper
-                        .d-product__price
-                            span.d-product__priceOld=product.priceOld
-                            span.d-product__priceNew=product.priceNew
-                        .d-product__discount
-                            i.far.fa-check-circle
-                            span=product.status
+                        if product.priceOld || product.priceNew
+                            .d-product__price
+                                span.d-product__priceOld=product.priceOld
+                                span.d-product__priceNew=product.priceNew
+                        if product.status.available
+                            .d-product__status.d-product__status--success
+                                i.far.fa-check-circle
+                                span=product.status.title
+                        else
+                            .d-product__status.d-product__status--error
+                                i.fas.fa-minus-circle
+                                span=product.status.title
                     a.d-button.d-button--primary.d-button--icon.d-button--lg.js-modal-open
                         i.fas.fa-shopping-cart
-                        span Купить
+                        span=product.action
                 .d-product__slider
                     .swiper-container.gallery-top
-                        span.d-badge.d-badge--sale=product.badge
+                        span(class="d-badge d-badge--"+ product.badge.type)=product.badge.title
                         .swiper-wrapper
                             each val in product.images
                                 .swiper-slide
@@ -34,15 +39,21 @@ mixin product(productName)
                 .hide-xs
                     h1.d-product__title=product.title
                     .d-product__priceWrapper
-                        .d-product__price
-                            span.d-product__priceOld=product.priceOld
-                            span.d-product__priceNew=product.priceNew
-                        .d-product__discount
-                            i.far.fa-check-circle
-                            span=product.status
+                        if product.priceOld || product.priceNew
+                            .d-product__price
+                                span.d-product__priceOld=product.priceOld
+                                span.d-product__priceNew=product.priceNew
+                        if product.status.available
+                            .d-product__status.d-product__status--success
+                                i.far.fa-check-circle
+                                span=product.status.title
+                        else
+                            .d-product__status.d-product__status--error
+                                i.fas.fa-minus-circle
+                                span=product.status.title
                     a.d-button.d-button--primary.d-button--icon.d-button--lg.js-modal-open
                         i.fas.fa-shopping-cart
-                        span Купить
+                        span=product.action
                 .d-tabs.d-product__tabs.js-tabs
                     ul.d-tabs__nav
                         li.d-tabs__navItem
