@@ -106,6 +106,7 @@ $(document).ready(function(){
     if (!isMobile) {
         toggleNavClass();
     }
+    scrollToSection();
 
     copyrightYear.text(currentYear);
 
@@ -122,17 +123,22 @@ $(document).ready(function(){
         }
     });
 
-    menuLink.on('click', function(e){
-        // e.preventDefault();
-        menuLink.removeClass('is-active');
-        $(this).addClass('is-active');
-        // var linkOffset = $($(this).attr('href')).offset().top - navHeight + 20;
-        // $('html,body').animate({ scrollTop: linkOffset },500);
+    //scroll to section
+    $(window).on('hashchange', function(e) {
+        e.preventDefault();
+        scrollToSection();
+    });
 
+    function scrollToSection() {
+        menuLink.removeClass('is-active');
+        var linkOffset = $(location.hash).offset().top - navHeight + 20;
+        $('html,body').animate({ scrollTop: linkOffset },500);
+        $('[href*='+location.hash.replace(/^#/, '')+']').addClass('is-active');
         menuBtn.removeClass('is-active');
         mobileNav.removeClass('slideInLeft');
         mobileNav.addClass('slideOutLeft');
-    });
+    }
+    //scroll to section END
 
     $(window).scroll(function(){
         $(this).scrollTop() > $(window).height() ? $('.scrollTop').fadeIn() : $('.scrollTop').fadeOut();
