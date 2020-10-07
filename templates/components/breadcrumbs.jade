@@ -1,12 +1,17 @@
 mixin breadcrumbs(mainPage, goodPage)
     .d-breadcrumbs
-        ul.d-breadcrumbs__list
-            li.d-breadcrumbs__listItem
-                a.d-breadcrumbs__listItemLink(href="https://www.drapesdesign.com.ua/")
+        ul.d-breadcrumbs__list(itemscope itemtype="https://schema.org/BreadcrumbList")
+            li.d-breadcrumbs__listItem(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                a.d-breadcrumbs__listItemLink(itemprop="item" href="https://www.drapesdesign.com.ua/")
                     i.fas.fa-home
-                    | Главная
-            li.d-breadcrumbs__listItem
-                a.d-breadcrumbs__listItemLink(href="https://www.drapesdesign.com.ua/shop")=mainPage
+                    span(itemprop="name") Главная
+                meta(itemprop="position" content="1")
+            li.d-breadcrumbs__listItem(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                a.d-breadcrumbs__listItemLink(href="https://www.drapesdesign.com.ua/shop")
+                    span(itemprop="name")=mainPage
+                meta(itemprop="position" content="2")
             if goodPage
-                li.d-breadcrumbs__listItem
-                    a.d-breadcrumbs__listItemLink=goodPage
+                li.d-breadcrumbs__listItem(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                    a.d-breadcrumbs__listItemLink
+                        span(itemprop="name")=goodPage
+                    meta(itemprop="position" content="3")
