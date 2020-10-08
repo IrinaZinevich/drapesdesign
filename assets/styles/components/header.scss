@@ -180,3 +180,9 @@
     }
   }
 }
+
+.d-shop {
+  .d-header__navLink[href*="shop"] {
+    color: var(--dd-primary-color);
+  }
+}

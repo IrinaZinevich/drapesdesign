@@ -130,13 +130,15 @@ $(document).ready(function(){
     });
 
     function scrollToSection() {
-        menuLink.removeClass('is-active');
-        var linkOffset = $(location.hash).offset().top - navHeight + 20;
-        $('html,body').animate({ scrollTop: linkOffset },500);
-        $('[href*='+location.hash.replace(/^#/, '')+']').addClass('is-active');
-        menuBtn.removeClass('is-active');
-        mobileNav.removeClass('slideInLeft');
-        mobileNav.addClass('slideOutLeft');
+        if(location.hash) {
+            menuLink.removeClass('is-active');
+            var linkOffset = $(location.hash).offset().top - navHeight + 20;
+            $('html,body').animate({ scrollTop: linkOffset },500);
+            $('[href*='+location.hash.replace(/^#/, '')+']').addClass('is-active');
+            menuBtn.removeClass('is-active');
+            mobileNav.removeClass('slideInLeft');
+            mobileNav.addClass('slideOutLeft');
+        }
     }
     //scroll to section END
 
