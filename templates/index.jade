@@ -2,7 +2,7 @@ doctype html
 html(lang='ru-UA')
     head
         meta(charset='UTF-8')
-        title ⭐️ Авторские шторы для кухни, спальни, гостинной в Украине и Киеве от компании Drapesdesign
+        title ⭐️ Шторы, гардины под заказ для кухни, спальни, гостинной в Украине и Киеве от компании Drapesdesign
         link(rel="canonical" href="https://www.drapesdesign.com.ua")
         link(rel="canonical" href="https://www.drapesdesign.com.ua")
         link(rel="alternate" hreflang="ru" href="https://www.drapesdesign.com.ua")
@@ -11,7 +11,7 @@ html(lang='ru-UA')
         meta(name='keywords', content='Шторы для кухни, спальни, гостинной в Украине и Киеве готовые и под заказ')
         meta(property='og:type', content='website')
         meta(property='og:locale', content='ru-UA')
-        meta(property='og:title', content='Авторские шторы для кухни, спальни, гостинной в Украине и Киеве от компании Drapesdesign')
+        meta(property='og:title', content='Шторы, гардины под заказ для кухни, спальни, гостинной в Украине и Киеве от компании Drapesdesign')
         meta(property='og:description', content='🔹 Купить готовые шторы в интернет-магазине Drapesdesign 🔹 Заказать индивидуальный пошив по авторскому дизайну 🔹 Постоянные акции и скидки за 2-е и 3-е окно ☎ (093)917-20-79')
         meta(property='og:url', content='https://www.drapesdesign.com.ua')
         meta(property='og:site_name', content='drapesdesign.com.ua')
@@ -25,19 +25,27 @@ html(lang='ru-UA')
             include components/topbar
             include components/header
             main
-                section.d-section.d-section--hero
+                section.d-section.d-section--hero.d-section--main
                     .d-section__content
-                        h1.d-section__title.d-section__title--hero Шторы на заказ с уникальным дизайном на любой вкус и бюджет
-                        h2.d-section__subtitle.d-section__subtitle--hero
-                            | Именно здесь вы найдете лучшие дизайнерские гардины ручной работы на любой вкус и дизайн, которые не только украсят Ваш дом, но и добавят свежести, уюта и красок в повседневную жизнь.
-                        .d-section__buttons
-                            a.d-button.d-button--bordered.nav-link(href='#contacts')
-                                span Сделать заказ
-                            a.d-button.d-button--bordered.nav-link(href='#about-us')
-                                span Узнать больше
+                        .d-section__title Квартира выглядит пусто?
+                        h1.d-section__subtitle Авторские шторы в Украине от Drapesdesign помогут решить эту проблему
+                        .d-section__row
+                            .d-section__col
+                                .d-section__card.d-section__card--left
+                                    h2.d-section__info Разработка индивидуального дизайна и пошив штор на заказ за 3 дня
+                                    a.d-button.d-button--bordered.nav-link(href='https://www.drapesdesign.com.ua/portfolio/')
+                                        span Наши работы
+                            .d-section__col
+                                .d-section__card.d-section__card--right
+                                    h2.d-section__info Продажа готовых изделий для экономии для Вашего времени и энергии
+                                    a.d-button.d-button--bordered.nav-link(href='https://www.drapesdesign.com.ua/shop/')
+                                        span Магазин штор
+
+                        a.d-section__arrowBtn(href="#about-us")
+                            i.fas.fa-arrow-down.animated.bounceDown.infinite
                 section#about-us.d-section
                     .d-section__content
-                        h1.d-section__title О нас
+                        h2.d-section__title О нас
                         h3.d-section__subtitle
                             p
                                 | Дизайнерские шторы от Drapesdesign состоят из отдельных полосок, которые можно двигать и менять местами, если хочется чего-то нового, не тратя много усилий. Все элементы гардин подбираются под цвет и стиль общего интерьера комнаты или квартиры индивидуально.
@@ -76,23 +84,9 @@ html(lang='ru-UA')
                                     | Доставка по
                                     br
                                     | всей Украине
-                section#portfolio.d-section
-                    .d-section__content
-                        h1.d-section__title Портфолио
-                        h3.d-section__subtitle
-                            | Ниже представлены примеры работ, выполнены с использованием различных материалов: шифон, кристалон, органза, батист и декораций
-                        .d-tiles
-                            ul.d-tiles__list
-                                - for (let index = 1; index <= 46; index++)
-                                    li.d-tiles__item(class = index >= 29 && 'd-tiles__item--wide')
-                                        div.d-tiles__itemContent
-                                            button.d-tiles__itemBtn
-                                                i.fas.fa-search
-                                            img(data-index=index, src='https://www.drapesdesign.com.ua/images/gallery/'+index+'.jpg', alt='Шторы на заказ Drapesdesign')
-                            include components/preview
                 section#contacts.d-section
                     .d-section__content
-                        h1.d-section__title Контакты
+                        h2.d-section__title Контакты
                         h3.d-section__subtitle
                             | Заполните форму обратной связи и наш менеджер свяжется с Вами в ближайшее время или воспользуйтесь контактными данными, чтобы сделать заказ или для уточнения деталей
                         .d-contacts
@@ -127,7 +121,7 @@ html(lang='ru-UA')
                                                     i.fab.fa-instagram
                 section#shipping.d-section.d-section--shipping
                     .d-section__content
-                        h1.d-section__title Оплата и доставка
+                        h2.d-section__title Оплата и доставка
                         h3.d-section__subtitle
                             b Оплата
                             |  в компании Drapesdesign осуществляется 2-мя способами:

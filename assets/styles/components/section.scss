@@ -8,12 +8,64 @@
     position: relative;
   }
 
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 600px;
+    padding: 16px 24px;
+    border: 1px solid var(--dd-color-white);
+    border-radius: 3px;
+    @include transition;
+
+    &:hover {
+      background-color: rgba(39,15,10,0.3);
+    }
+
+    &--left {
+      @include phones-excluded {
+        align-items: flex-end;
+        text-align: right;
+        margin-left: auto;
+      }
+    }
+
+    &--right {
+      @include phones-excluded {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+
+    &--left,
+    &--right {
+      @include phones {
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+      }
+    }
+
+  }
+
+  &__info {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include phones {
+      font-size: 16px;
+    }
+  }
+
   &--hero {
     position: relative;
     justify-content: center;
-    min-height: calc(100vh - 210px);
+    min-height: calc(100vh - 152px - 41px);
     text-align: center;
-    background-image: url('../images/hero.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -22,29 +74,69 @@
     @include phones {
       min-height: calc(100vh - 60px);
       background-attachment: initial;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(43, 30, 24, 0.5);
+      padding: 0;
     }
   }
 
-  &--shop {
+  &--main {
+    background-image: url('../images/drapesdesign-main-bg.jpg');
+
+    .d-section {
+      &__title {
+        font-size: 28px;
+        font-weight: 400;
+        text-transform: unset;
+
+        @include phones {
+          font-size: 22px;
+        }
+      }
+
+      &__subtitle {
+        max-width: 800px;
+        font-size: 30px;
+        font-weight: 500;
+
+        @include phones {
+          font-size: 22px;
+        }
+      }
+
+      &__row {
+        margin-top: auto;
+      }
+
+      &__col {
+        @include phones {
+          padding: 10px;
+        }
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        padding: 10px 30px;
+        height: 100%;
+        background-color: rgba(39, 15, 10, 0.6);
+
+        @include phones {
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  &--portfolio {
     text-align: left;
-    background-image: url('../images/DD_hero-shop.jpg');
+    background-image: url('../images/drapesdesign-portfolio-bg.jpg');
 
     &:before {
       display: none;
     }
 
     .d-section {
-
       &__content {
         padding: 30px;
         display: flex;
@@ -68,8 +160,40 @@
     }
   }
 
+  &--shop {
+    text-align: left;
+    background-image: url('../images/drapesdesign-shop-bg.jpg');
+
+    &:before {
+      display: none;
+    }
+
+    .d-section {
+      &__content {
+        padding: 30px;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgba(40, 22, 0, 0.5);
+
+        @include phones {
+          padding: 10px 0;
+        }
+      }
+
+      &__row, &__title {
+        margin-top: auto;
+      }
+
+      &__col {
+        max-width: 500px;
+      }
+    }
+  }
+
   &__arrowBtn {
-    margin: 15px auto 0;
+    margin: 0 auto;
     padding: 10px 20px;
     color: var(--dd-color-white);
 
@@ -135,11 +259,11 @@
 
   &__title {
     position: relative;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: var(--dd-base-padding) 0;
     text-align: center;
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.5;
     text-transform: uppercase;
@@ -196,10 +320,10 @@
   }
 
   &__buttons {
-    margin-top: 3rem;
-    margin-left: -1em;
+    margin: 30px 0 30px -1em;
 
     .d-button {
+      min-width: 250px;
       margin-top: 1rem;
       margin-left: 1rem;
     }

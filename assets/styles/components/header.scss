@@ -2,7 +2,7 @@
   width: 100%;
   max-width: var(--dd-base-width);
   margin: 0 auto;
-  height: 170px;
+  height: 152px;
 
   @include phones {
     height: 60px;
@@ -124,13 +124,11 @@
 
   &__logo {
     display: inline-block;
-    padding: 1rem 1.5rem 0;
-    margin-top: 0.5rem;
+    padding: 1.5rem 1.5rem 0;
 
     @include phones {
       &--static {
         padding: 0;
-        margin: 0;
       }
 
       &--static &Img {
@@ -153,7 +151,7 @@
 
     &Img {
       display: block;
-      max-height: 70px;
+      max-height: 60px;
     }
   }
 
@@ -181,8 +179,8 @@
   }
 }
 
-.d-shop {
-  .d-header__navLink[href*="shop"] {
-    color: var(--dd-primary-color);
-  }
+
+.d-shop .d-header__navLink[href*="shop"],
+.d-portfolio .d-header__navLink[href*="portfolio"] {
+  color: var(--dd-primary-color);
 }

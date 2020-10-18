@@ -89,7 +89,7 @@ function ajax(method, url, data, success, error) {
 
 $(document).ready(function(){
     var mainPageOffset = $('main').offset().top;
-    var navHeight = 76;
+    var navHeight = 68;
     var menuBtn = $('.menu-btn');
     var menuLink = $('.nav-link');
     var mobileNav = $('.d-header__nav--mobile');

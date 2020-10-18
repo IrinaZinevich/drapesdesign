@@ -1,0 +1,69 @@
+doctype html
+html(lang='ru-UA')
+    head
+        meta(charset='UTF-8')
+        title ⭐️ Шторы, гардины под заказ | Купить в Украине и Киеве по лучшей цене от Drapesdesign
+        link(rel="canonical" href="https://www.drapesdesign.com.ua/portfolio")
+        link(rel="alternate" hreflang="ru" href="https://www.drapesdesign.com.ua/portfolio")
+        meta(name='robots', content='index, follow')
+        meta(name='description', content='🔹 Заказать индивидуальный пошив штор 🔹 Авторский дизайн 🔹 Постоянные акции и скидки за 2-е и 3-е окно')
+        meta(name='keywords', content='Шторы для кухни, спальни, гостинной в Украине и Киеве под заказ')
+        meta(property='og:type', content='website')
+        meta(property='og:locale', content='ru-UA')
+        meta(property='og:title', content='Шторы, гардины под заказ | Купить в Украине и Киеве по лучшей цене от Drapesdesign')
+        meta(property='og:description', content='🔹 Заказать индивидуальный пошив штор 🔹 Авторский дизайн 🔹 Постоянные акции и скидки за 2-е и 3-е окно')
+        meta(property='og:url', content='https://www.drapesdesign.com.ua/portfolio')
+        meta(property='og:site_name', content='drapesdesign.com.ua')
+        meta(property='og:image', content='https://drapesdesign.com.ua/images/drapesdesign_share.jpg')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+        link(rel='stylesheet', href='../styles/styles.css')
+    body#body
+        .l-wrapper.d-portfolio
+            include ../components/topbar
+            include ../components/header
+            include ../components/modal
+            +modal('Сделать заказ', 'Оставьте контактные данные и мы свяжемся с Вами в ближайшее время для для выяснения деталей заказа', 'Отправить')
+            main
+
+                section.d-section.d-section--hero.d-section--portfolio
+                    .d-section__content
+                        h1.d-section__title Портфолио
+                        .d-section__row
+                            h3.d-section__description
+                                //| Каждая полоска свободно двигается по карнизу, не создавая складок, что обеспечивается установленными сверху и снизу в качестве утяжелителей металлическими прутиками или алюминиевыми полосками. Такие гардины не загораживают свет, а дополнительной защитой от солнечных лучей могут быть жалюзи.
+                                | На странице портфолио представлены фото успешно реализованних проектов штор и гардин, которые уже украшают комнаты наших клиентов.
+                                br
+                                br
+                                | Воспользуйтесь контактной формой, чтобы заказать разработку своего персонального дизайна и пошива штор на заказ.
+                            .d-section__col
+                                include ../components/contact-form
+                                +contact-form('Пригласить дизайнера', true)
+                        a.d-section__arrowBtn(href="#products")
+                            i.fas.fa-arrow-down.animated.bounceDown.infinite
+                section.d-section#products
+                    include ../components/banner
+                    include ../components/breadcrumbs
+                    +banner('У нас действуют постоянные скидки: -20% на второе окно и -30% на третье при пошиве штор на заказ.', '#')
+                    +breadcrumbs('Портфолио')
+                    .d-section__content
+                        .d-section__content
+                            .d-tiles
+                                ul.d-tiles__list
+                                    - for (let index = 1; index <= 46; index++)
+                                        li.d-tiles__item(class = index >= 29 && 'd-tiles__item--wide')
+                                            div.d-tiles__itemContent
+                                                button.d-tiles__itemBtn
+                                                    i.fas.fa-search
+                                                img(data-index=index, src='https://www.drapesdesign.com.ua/images/gallery/' + index + '.jpg', alt='Шторы на заказ Drapesdesign')
+                                include ../components/preview
+            include ../components/footer
+        a.d-button.d-button--toTop.nav-link.scrollTop(href='#body')
+            span
+                i.fas.fa-chevron-up
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
+        script(src='../js/script-min.js')
+        script.
