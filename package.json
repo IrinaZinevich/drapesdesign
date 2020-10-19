@@ -5,6 +5,7 @@
   "main": "build/script.js",
   "dependencies": {
     "autoprefixer": "^9.8.6",
+    "cocoen": "^2.0.5",
     "connect": "^3.7.0",
     "connect-livereload": "^0.6.1",
     "gulp-imagemin": "^7.1.0",

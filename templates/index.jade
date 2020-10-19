@@ -19,6 +19,7 @@ html(lang='ru-UA')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
         link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+        link(rel='stylesheet', href='styles/libs/cocoen.css')
         link(rel='stylesheet', href='styles/styles.css')
     body#body
         .l-wrapper
@@ -81,9 +82,15 @@ html(lang='ru-UA')
                                     path(d='M338.197,323.136l-64-64c-4.16-4.16-10.923-4.16-15.083,0c-4.16,4.16-4.16,10.923,0,15.083l64,64    c2.091,2.069,4.821,3.115,7.552,3.115c2.731,0,5.461-1.045,7.531-3.115C342.357,334.059,342.357,327.296,338.197,323.136z')
                                 h4.d-features__itemTitle
                                     | Экономия времени
-                                p.d-features__itemInfo Мы заранее разработали различные варианты дизайна занавесок и воплотили их в жизнь. Таким образом самые занятые наши клиенты могут посетить наш Магазин и подобрать готовые изделия для своей квартиры, не тратя времени на разработку
-
-                section#workflow.d-section
+                                p.d-features__itemInfo Мы заранее разработали различные варианты дизайна занавесок и воплотили их в жизнь. Таким образом самые занятые клиенты могут посетить наш Магазин и подобрать готовые изделия для своей квартиры, не тратя времени на разработку
+                section#before-after.d-section
+                    .d-section__content
+                        h2.d-section__title Убедитесь в качестве нашей работы
+                        h3.d-section__subtitle Пример комнаты до изменений (слева) и после (справа)
+                        .d-section__compare.cocoen
+                            img(src="images/compare/drapes-before.jpg" alt="Image of drapes after changes")
+                            img(src="images/compare/drapes-after.jpg" alt="Image of drapes after changes")
+                section#how-it-works.d-section
                     .d-section__content
                         h2.d-section__title Как мы работаем
                         .d-steps
@@ -163,5 +170,6 @@ html(lang='ru-UA')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
         script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
         script(src="//code.jivosite.com/widget/3Nay3paAEO" async)
+        script(src="js/cocoen.js" async)
         script(src='js/script-min.js')
         script.

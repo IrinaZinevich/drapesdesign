@@ -107,7 +107,6 @@ $(document).ready(function(){
         toggleNavClass();
     }
     scrollToSection();
-
     copyrightYear.text(currentYear);
 
     modalOpenBtn.on('click', function () {
