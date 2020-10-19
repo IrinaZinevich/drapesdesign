@@ -185,6 +185,16 @@ dt, dd {
   }
 }
 
+.d-link {
+  color: var(--dd-primary-color);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--dd-primary-color);
+  }
+}
+
 .d-copyright {
   padding: 0.75rem;
   background-color: var(--dd-font-color);
