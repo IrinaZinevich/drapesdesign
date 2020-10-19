@@ -28,6 +28,11 @@
     padding: 0.313em;
     border: 1px solid var(--dd-button-primary-color);
 
+    @include tablets {
+      margin-bottom: 45px;
+      margin-right: 12px;
+    }
+
     &:hover {
       --dd-button-primary-color: var(--dd-button-hover-color);
     }

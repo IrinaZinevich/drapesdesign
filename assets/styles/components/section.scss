@@ -102,10 +102,6 @@
         }
       }
 
-      &__row {
-        margin-top: auto;
-      }
-
       &__col {
         @include phones {
           padding: 10px;
@@ -259,7 +255,7 @@
 
   &__title {
     position: relative;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: var(--dd-base-padding) 0;
     text-align: center;

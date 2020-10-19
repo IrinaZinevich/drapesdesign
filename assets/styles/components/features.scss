@@ -1,37 +1,29 @@
 .d-features {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 30px;
   margin-left: -2em;
   font-size: 1rem;
 
   @include phones {
+    flex-direction: column;
     font-size: 12px;
   }
 
   &__item {
-    text-align: center;
-    width: 11.25em;
-    height: 11.25em;
-    border: 2px solid var(--dd-primary-color);
-    border-radius: 50%;
-    padding: 1em;
+    flex: 1;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
     margin-left: 2em;
     margin-top: 1em;
+    padding: 24px;
+    border: 1px solid var(--dd-primary-color);
     cursor: pointer;
     @include transition;
 
     &:hover {
       background-color: var(--dd-primary-color);
       color: var(--dd-color-white);
-      transform: scale(1.1);
+      transform: scale(1.035);
 
       i {
         color: var(--dd-color-white);
@@ -39,13 +31,23 @@
     }
 
     &Title {
-      margin-top: 0.5em;
-      font-size: 1em;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
     }
 
-    i {
-      font-size: 4em;
-      color: var(--dd-primary-color);
+    &Info {
+      margin: 16px 0 0;
+      font-size: 16px;
+      line-height: 1.5;
     }
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    fill: currentColor;
   }
 }

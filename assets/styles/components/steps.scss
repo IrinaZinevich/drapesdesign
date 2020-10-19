@@ -1,0 +1,124 @@
+.d-steps {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 30px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--dd-primary-color);
+
+    @include phones-excluded {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include phones {
+      left: 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__item {
+    position: relative;
+
+    @include phones-excluded {
+      display: flex;
+      flex-direction: column;
+      flex: 50% 0 0;
+      min-height: 165px;
+      padding: 16px 60px;
+    }
+
+    @include phones {
+      padding: 16px 0 16px 50px;
+    }
+
+    &:nth-child(even) {
+      @include phones-excluded {
+        margin-top: 156px;
+      }
+    }
+
+    &:nth-child(odd) {
+      @include phones-excluded {
+        align-items: flex-end;
+        text-align: right;
+
+        .d-steps__item {
+          &Number {
+            right: 0;
+            left: auto;
+            margin-right: -25px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 2s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 2.5s;
+    }
+
+    &Title {
+      font-size: 18px;
+    }
+
+    &Number {
+      --dd-number-size: 50px;
+      position: absolute;
+      right: auto;
+      left: 0;
+      top: 0;
+      margin-left: -25px;
+      width: var(--dd-number-size);
+      height: var(--dd-number-size);
+      text-align: center;
+      font-size: 24px;
+      line-height: var(--dd-number-size);
+      font-weight: 500;
+      border-radius: 50%;
+      background-color: var(--dd-primary-color);
+      color: var(--dd-color-white);
+      animation-name: scaleUpDown;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      animation-delay: inherit;
+
+      @include phones {
+        --dd-number-size: 40px;
+        left: 15px;
+        font-size: 20px;
+      }
+    }
+
+    &Info {
+      max-width: 420px;
+      margin: 16px 0 0;
+      line-height: 1.5;
+    }
+  }
+}
