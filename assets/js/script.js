@@ -1,38 +1,3 @@
-// Swiper initialization
-// var mySwiper = new Swiper ('.swiper-container', {
-//     loop: true,
-//     autoplay: {
-//         delay: 2000,
-//     },
-//     keyboard: {
-//         enabled: true,
-//         onlyInViewport: false,
-//     },
-//     spaceBetween: 10,
-//     breakpoints: {
-//         480: {
-//             slidesPerView: 2,
-//         },
-//         768: {
-//             slidesPerView: 3,
-//         },
-//         1024: {
-//             slidesPerView: 4,
-//         }
-//     },
-//     loop:true,
-//     autoHeight: true,
-//     loopedSlides: 1,
-//     slidesPerView: 1,
-//     pagination: {
-//         el: '.swiper-pagination',
-//     },
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-// });
-
 //Contact form
 
 window.addEventListener("DOMContentLoaded", function() {

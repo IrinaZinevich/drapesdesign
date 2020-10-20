@@ -20,6 +20,7 @@ html(lang='ru-UA')
         link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
         link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
         link(rel='stylesheet', href='styles/libs/cocoen.css')
+        link(rel='stylesheet', href='styles/libs/swiper.css')
         link(rel='stylesheet', href='styles/styles.css')
     body#body
         .l-wrapper
@@ -130,6 +131,32 @@ html(lang='ru-UA')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
         script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
         script(src="//code.jivosite.com/widget/3Nay3paAEO" async)
-        script(src="js/cocoen.js" async)
+        script(src="js/cocoen-min.js" async)
+        script(src='js/libs/swiper-min.js')
         script(src='js/script-min.js')
         script.
+            var mySwiper = new Swiper('.swiper-container', {
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: false,
+                },
+                spaceBetween: 10,
+                centeredSlides: true,
+                breakpoints: {
+                    480: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    }
+                },
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
