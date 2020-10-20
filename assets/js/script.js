@@ -212,7 +212,7 @@ $(document).ready(function(){
         }
         img.removeClass('is-zoomed');
         img.attr('data-index', index);
-        img.attr('src', 'images/gallery/' + index + '.jpg');
+        img.attr('src', 'https://www.drapesdesign.com.ua/images/gallery/' + index + '.jpg');
     }
 
     function toggleNavClass() {

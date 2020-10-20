@@ -1,12 +1,17 @@
 .d-features {
-  display: flex;
-  margin-bottom: 30px;
-  margin-left: -2em;
   font-size: 1rem;
+  max-width: 1500px;
+  margin: auto;
 
-  @include phones {
-    flex-direction: column;
-    font-size: 12px;
+  &__list {
+    display: flex;
+    margin-left: -2em;
+    margin-bottom: 30px;
+
+    @include phones {
+      flex-direction: column;
+      font-size: 12px;
+    }
   }
 
   &__item {
