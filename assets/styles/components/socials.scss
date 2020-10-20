@@ -28,4 +28,8 @@
       }
     }
   }
+
+  &--left &__list {
+    justify-content: initial;
+  }
 }

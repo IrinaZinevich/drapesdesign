@@ -6,6 +6,7 @@
 
   &__content {
     position: relative;
+    min-height: 100%;
   }
 
   &__card {
@@ -20,7 +21,7 @@
     @include transition;
 
     &:hover {
-      background-color: rgba(39,15,10,0.3);
+      background-color: rgba(50, 40, 60, 0.3);
     }
 
     &--left {
@@ -79,7 +80,7 @@
   }
 
   &--main {
-    background-image: url('../images/drapesdesign-main-bg.jpg');
+    background-image: url('../images/drapesdesign-bg.jpg');
 
     .d-section {
       &__title {
@@ -115,7 +116,7 @@
         flex: 1;
         padding: 10px 30px;
         height: 100%;
-        background-color: rgba(39, 15, 10, 0.6);
+        background-color: rgba(50, 40, 60, 0.6);
 
         @include phones {
           padding: 20px;
@@ -139,7 +140,7 @@
         flex: 1;
         flex-direction: column;
         justify-content: space-between;
-        background-color: rgba(82, 64, 148, 0.5);
+        background-color: rgba(41, 56, 41, 0.6);
 
         @include phones {
           padding: 10px 0;
@@ -171,7 +172,7 @@
         flex: 1;
         flex-direction: column;
         justify-content: space-between;
-        background-color: rgba(40, 22, 0, 0.5);
+        background-color: rgba(50, 40, 60, 0.6);
 
         @include phones {
           padding: 10px 0;
@@ -184,6 +185,32 @@
 
       &__col {
         max-width: 500px;
+      }
+    }
+  }
+
+  &--small {
+    background-image: url('../images/drapesdesign-contact-bg.jpg');
+    padding: 0;
+    height: 400px;
+    background-attachment: scroll;
+    background-position: right center;
+
+    @include phones {
+      background-position: 75% center;
+    }
+
+    .d-section {
+      &__content {
+        background-color: rgba(0,0,0,0.2);
+      }
+    }
+
+    .d-contacts {
+      align-items: center;
+
+      @include phones {
+        padding: 30px var(--dd-base-padding);
       }
     }
   }
@@ -322,6 +349,15 @@
       min-width: 250px;
       margin-top: 1rem;
       margin-left: 1rem;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+
+    div {
+      height: 100%;
     }
   }
 

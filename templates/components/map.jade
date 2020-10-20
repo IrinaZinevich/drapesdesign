@@ -1,0 +1,16 @@
+.d-section__map#wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3
+    #map-9cd199b9cc5410cd3b1ad21cab2e54d3
+    script.
+        (function () {
+            var setting = {"height":300,"zoom":10,"queryString":"Киев, Украина","place_id":"ChIJBUVa4U7P1EAR_kYBF9IxSXY","satellite":false,"centerCoord":[50.40241140676761,30.53269056939257],"cid":"0x764931d2170146fe","lang":"ru","cityUrl":"/ukraine/kiev","cityAnchorText":"Карта [CITY1], Киевская область, Украина","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"292345"};
+            var d = document;
+            var s = d.createElement('script');
+            s.src = 'https://1map.com/js/script-for-user.js?embed_id=292345';
+            s.async = true;
+            s.onload = function (e) {
+                window.OneMap.initMap(setting)
+            };
+            var to = d.getElementsByTagName('script')[0];
+            to.parentNode.insertBefore(s, to);
+        })();
+    a(href='https://1map.com/ru/map-embed') 1 Map

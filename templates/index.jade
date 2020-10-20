@@ -39,7 +39,7 @@ html(lang='ru-UA')
                                         span Наши работы
                             .d-section__col
                                 .d-section__card.d-section__card--right
-                                    h2.d-section__info Продажа готовых изделий для экономии для Вашего времени и энергии
+                                    h2.d-section__info Продажа готовых изделий для экономии Вашего времени и энергии
                                     a.d-button.d-button--bordered.nav-link(href='https://www.drapesdesign.com.ua/shop/')
                                         span Магазин штор
 
@@ -76,15 +76,20 @@ html(lang='ru-UA')
                     .d-section__content
                         h2.d-section__title Отзывы наших клиентов
                         include components/testimonials
+                section#contact-form.d-section.d-section--small
+                    .d-section__content
+                        .d-contacts
+                            .d-contacts__col
+                                h3.d-contacts__title Получить бесплатную консультацию
+                                include components/contact-form
+                                +contact-form('Отправить', true)
+
                 section#contacts.d-section
                     .d-section__content
                         h2.d-section__title Контакты
-                        h3.d-section__subtitle
-                            | Заполните форму обратной связи и наш менеджер свяжется с Вами в ближайшее время или воспользуйтесь контактными данными, чтобы сделать заказ или для уточнения деталей
                         .d-contacts
-                            .d-contacts__col
-                                include components/contact-form
-                                +contact-form('Оставить заявку')
+                            .d-contacts__col.d-contacts__col--map
+                                include components/map
                             .d-contacts__col.d-contacts__col--socials
                                 .d-contacts__block
                                     ul.d-contacts__list
@@ -100,10 +105,10 @@ html(lang='ru-UA')
                                             a(href='tel:0967174810') 096 717 48 10
                                         li.d-contacts__listItem
                                             i.far.fa-clock
-                                            |                                     График работы:
+                                            | График работы:
                                             br
                                             | пн - вс с 10:00 до 20:00
-                                    .d-socials
+                                    .d-socials.d-socials--left
                                         ul.d-socials__list
                                             li.d-socials__listItem.d-socials__listItem--fb
                                                 a.d-socials__listItemLink(href='https://www.facebook.com/drapesdesigns/', target='_blank', rel='nofollow')
