@@ -27,7 +27,7 @@ html(lang='ru-UA')
             include components/topbar
             include components/header
             main
-                section.d-section.d-section--hero.d-section--main
+                section#hero.d-section.d-section--hero.d-section--main
                     .d-section__content
                         .d-section__title Квартира выглядит пусто?
                         h1.d-section__subtitle Авторские шторы в Украине от Drapesdesign помогут решить эту проблему!
@@ -35,12 +35,12 @@ html(lang='ru-UA')
                             .d-section__col
                                 .d-section__card.d-section__card--left
                                     h2.d-section__info Разработка индивидуального дизайна и пошив штор на заказ за 3 дня
-                                    a.d-button.d-button--bordered.nav-link(href='https://www.drapesdesign.com.ua/portfolio/')
+                                    a.d-button.d-button--bordered(href='https://www.drapesdesign.com.ua/portfolio/')
                                         span Наши работы
                             .d-section__col
                                 .d-section__card.d-section__card--right
                                     h2.d-section__info Продажа готовых изделий для экономии Вашего времени и энергии
-                                    a.d-button.d-button--bordered.nav-link(href='https://www.drapesdesign.com.ua/shop/')
+                                    a.d-button.d-button--bordered(href='https://www.drapesdesign.com.ua/shop/')
                                         span Магазин штор
 
                         a.d-section__arrowBtn(href="#about-us")
@@ -84,7 +84,7 @@ html(lang='ru-UA')
                                 include components/contact-form
                                 +contact-form('Отправить', true)
                 section#faq.d-section
-                    h2.d-section__title Часто задавыемые выпросы
+                    h2.d-section__title Часто задаваемые вопросы
                     include components/faq
                 section#contacts.d-section
                     .d-section__content
@@ -132,9 +132,8 @@ html(lang='ru-UA')
                             |  готовых изделий Drapesdesign осуществляется посредством транспортной компании «Новая почта» по всей Украине в течении 1-3 дней.
             include components/footer
 
-        a.d-button.d-button--toTop.nav-link.scrollTop(href='#body')
-            span
-                i.fas.fa-chevron-up
+        include components/side-nav
+        include components/scroll-top
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
         script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
         script(src="//code.jivosite.com/widget/3Nay3paAEO" async)

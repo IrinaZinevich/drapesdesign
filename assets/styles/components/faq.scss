@@ -1,21 +1,7 @@
 .d-faq {
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   margin: 40px auto 0;
-
-  &__row {
-    @include phones-excluded {
-      display: flex;
-      margin: 0 -10px;
-    }
-  }
-
-  &__col {
-    @include phones-excluded {
-      flex: 50%;
-      padding: 0 10px;
-    }
-  }
 
   &__list {
     &Item {
@@ -41,7 +27,7 @@
           &__answer {
             display: block;
             padding: 4px 16px 16px 0;
-            line-height: 1;
+            line-height: 1.5;
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
@@ -58,7 +44,7 @@
     background-color: var(--dd-color-white);
 
     &Text {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
     }
 
@@ -69,7 +55,7 @@
       padding-bottom: 2px;
       transform: translateY(-50%);
       margin-right: 14px;
-      font-size: 18px;
+      font-size: 16px;
       color: var(--dd-primary-color);
 
       &:before {

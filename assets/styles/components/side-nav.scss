@@ -1,0 +1,35 @@
+.d-sidenav {
+  --dd-primary-color: #5d4c89;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+
+  &__list {
+
+    &Item {
+
+      & + & {
+        margin-top: 15px;
+      }
+
+      &.is-active {
+        .d-sidenav__link {
+          background-color: var(--dd-primary-color);
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--dd-primary-color);
+    @include transition;
+  }
+}

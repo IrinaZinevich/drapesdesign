@@ -55,8 +55,8 @@ function ajax(method, url, data, success, error) {
 $(document).ready(function(){
     var mainPageOffset = $('main').offset().top;
     var navHeight = 68;
-    var menuBtn = $('.menu-btn');
-    var menuLink = $('.nav-link');
+    var menuBtn = $('.js-menu-btn');
+    var menuLink = $('.js-nav-link');
     var mobileNav = $('.d-header__nav--mobile');
     var header = $('.d-header');
     var copyrightYear = $('.d-copyright__year');
@@ -72,7 +72,6 @@ $(document).ready(function(){
     if (!isMobile) {
         toggleNavClass();
     }
-    scrollToSection();
     copyrightYear.text(currentYear);
 
     modalOpenBtn.on('click', function () {
@@ -89,29 +88,33 @@ $(document).ready(function(){
     });
 
     //scroll to section
-    $(window).on('hashchange', function(e) {
+    menuLink.on('click', function(e) {
         e.preventDefault();
-        scrollToSection();
+        scrollToSection($(this));
     });
 
-    function scrollToSection() {
-        if(location.hash) {
-            menuLink.removeClass('is-active');
-            var linkOffset = $(location.hash).offset().top - navHeight + 20;
-            $('html,body').animate({ scrollTop: linkOffset },500);
-            $('[href*='+location.hash.replace(/^#/, '')+']').addClass('is-active');
-            menuBtn.removeClass('is-active');
-            mobileNav.removeClass('slideInLeft');
-            mobileNav.addClass('slideOutLeft');
-        }
+    function scrollToSection(currentLink) {
+        var linkOffset = $(currentLink.attr('href')).offset().top - navHeight + 20;
+        $('html,body').animate({ scrollTop: linkOffset },500);
     }
-    //scroll to section END
 
-    $(window).scroll(function(){
-        $(this).scrollTop() > $(window).height() ? $('.scrollTop').fadeIn() : $('.scrollTop').fadeOut();
+    $(window).bind('scroll', function() {
+        $(this).scrollTop() > $(window).height() ? $('.js-scroll-section').fadeIn() : $('.js-scroll-section').fadeOut();
         if (!isMobile) {
             toggleNavClass();
         }
+
+        var currentTop = $(window).scrollTop();
+        var elems = $('.d-section');
+        elems.each(function(){
+            var elemTop 	= $(this).offset().top;
+            var elemBottom 	= elemTop + $(this).height();
+            if(currentTop >= elemTop - navHeight && currentTop <= elemBottom){
+                var id 		= $(this).attr('id');
+                var navElem = $('a[href="#' + id+ '"]');
+                navElem.parent().addClass('is-active').siblings().removeClass('is-active');
+            }
+        })
     });
 
     menuBtn.on('click', function () {
