@@ -23,7 +23,6 @@
     padding: 24px;
     border: 1px solid var(--dd-primary-color);
     border-radius: var(--dd-base-border-radius);
-    cursor: pointer;
     @include transition;
 
     &:hover {
@@ -31,9 +30,21 @@
       color: var(--dd-color-white);
       transform: scale(1.035);
 
+      a {
+        color: var(--dd-color-white);
+      }
+
       i {
         color: var(--dd-color-white);
       }
+    }
+
+    &Link {
+      display: inline-block;
+      margin: 0 5px;
+      font-weight: 500;
+      color: var(--dd-primary-color);
+      @include transition;
     }
 
     &Title {
