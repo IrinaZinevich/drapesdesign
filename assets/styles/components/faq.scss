@@ -1,0 +1,90 @@
+.d-faq {
+  max-width: 1200px;
+  width: 100%;
+  margin: 40px auto 0;
+
+  &__row {
+    @include phones-excluded {
+      display: flex;
+      margin: 0 -10px;
+    }
+  }
+
+  &__col {
+    @include phones-excluded {
+      flex: 50%;
+      padding: 0 10px;
+    }
+  }
+
+  &__list {
+    &Item {
+      margin-bottom: var(--dd-base-padding);
+      padding-left: 45px;
+      border-radius: var(--dd-base-border-radius);
+      border: var(--dd-base-border);
+      @include transition;
+      cursor: pointer;
+
+      &:hover {
+        border-color: var(--dd-primary-color);
+      }
+
+      &.is-active {
+        border-color: var(--dd-primary-color);
+
+        .d-faq {
+          &__questionIcon:before {
+            transform: rotate(90deg);
+          }
+
+          &__answer {
+            display: block;
+            padding: 4px 16px 16px 0;
+            line-height: 1;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+
+  &__question {
+    position: relative;
+    z-index: 1;
+    padding: 16px 16px 16px 0;
+    background-color: var(--dd-color-white);
+
+    &Text {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &Icon {
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      padding-bottom: 2px;
+      transform: translateY(-50%);
+      margin-right: 14px;
+      font-size: 18px;
+      color: var(--dd-primary-color);
+
+      &:before {
+        display: block;
+        @include transition;
+      }
+    }
+  }
+
+  &__answer {
+    opacity: 0;
+    visibility: hidden;
+    line-height: 0;
+    overflow: hidden;
+    transform: translateY(-20px);
+    @include transition;
+  }
+}

@@ -3,6 +3,7 @@
   --dd-button-hover-color: #dc745e;
 }
 .d-button {
+  --dd-base-border-radius: 2px;
   border: none;
   display: inline-block;
   position: relative;
@@ -12,7 +13,7 @@
   font-weight: 600;
   text-align: center;
   letter-spacing: 2px;
-  border-radius: 2px;
+  border-radius: var(--dd-base-border-radius);
   @include transition;
   cursor: pointer;
 
@@ -43,7 +44,7 @@
       justify-content: center;
       height: 100%;
       width: 100%;
-      border-radius: 2px;
+      border-radius: var(--dd-base-border-radius);
       background-color: var(--dd-button-primary-color);
       color: var(--dd-color-white);
       @include transition;
@@ -63,7 +64,7 @@
       display: inline-block;
       width: 100%;
       padding: var(--dd-base-padding);
-      border-radius: 2px;
+      border-radius: var(--dd-base-border-radius);
       font-size: 0.813em;
       line-height: 1;
       background-color: var(--dd-button-primary-color);

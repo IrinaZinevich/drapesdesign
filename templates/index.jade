@@ -27,7 +27,6 @@ html(lang='ru-UA')
             include components/topbar
             include components/header
             main
-
                 section.d-section.d-section--hero.d-section--main
                     .d-section__content
                         .d-section__title Квартира выглядит пусто?
@@ -84,7 +83,9 @@ html(lang='ru-UA')
                                 h3.d-contacts__title Получить бесплатную консультацию
                                 include components/contact-form
                                 +contact-form('Отправить', true)
-
+                section#faq.d-section
+                    h2.d-section__title Часто задавыемые выпросы
+                    include components/faq
                 section#contacts.d-section
                     .d-section__content
                         h2.d-section__title Контакты

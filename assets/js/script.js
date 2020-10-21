@@ -65,6 +65,7 @@ $(document).ready(function(){
     var modal = $('.js-modal');
     var modalOpenBtn = $('.js-modal-open');
     var tabs = $('.js-tabs');
+    var faq = $('.js-faq');
     var navPreviewBtn = preview.find('.d-preview__navBtn');
     var isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
     var currentYear = (new Date()).getFullYear();
@@ -198,4 +199,16 @@ $(document).ready(function(){
         $(this).addClass('is-active');
         container.find('#'+$(this).attr('data-link')).fadeIn(300);
     })
+
+    //faqs
+
+    faq.on('click', function () {
+        var allItems = $(this).parents('.js-faqs').find('.js-faq');
+        if(!$(this).hasClass('is-active')) {
+            allItems.removeClass('is-active');
+            $(this).addClass('is-active');
+        } else {
+            allItems.removeClass('is-active');
+        }
+    });
 });

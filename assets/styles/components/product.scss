@@ -89,7 +89,7 @@
 
   &__status {
     padding: 8px 15px;
-    border-radius: 3px;
+    border-radius: var(--dd-base-border-radius);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;

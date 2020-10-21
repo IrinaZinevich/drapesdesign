@@ -22,7 +22,7 @@
     margin-top: 1em;
     padding: 24px;
     border: 1px solid var(--dd-primary-color);
-    border-radius: 3px;
+    border-radius: var(--dd-base-border-radius);
     cursor: pointer;
     @include transition;
 

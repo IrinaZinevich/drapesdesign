@@ -32,7 +32,7 @@
     }
 
     @include phones-excluded {
-      border-radius: 3px;
+      border-radius: var(--dd-base-border-radius);
     }
   }
 

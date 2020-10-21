@@ -1,0 +1,11 @@
+.d-faq.js-faqs
+    .d-faq__row
+        - for (let index = 1; index <= 2; index++)
+            .d-faq__col
+                ul.d-faq__list
+                    - for (let index = 1; index <= 3; index++)
+                        li.d-faq__listItem.js-faq
+                            .d-faq__question
+                                i.fas.fa-chevron-right.d-faq__questionIcon
+                                h5.d-faq__questionText Как выбрать шторы?
+                            .d-faq__answer.js-faq-answer Легко
