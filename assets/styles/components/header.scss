@@ -181,6 +181,8 @@
 
 
 .d-shop .d-header__navLink[href*="shop"],
+.d-payments-shipping .d-header__navLink[href*="payments-shipping"],
+.d-news .d-header__navLink[href*="news"],
 .d-portfolio .d-header__navLink[href*="portfolio"] {
   color: var(--dd-primary-color);
 }

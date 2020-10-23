@@ -1,0 +1,57 @@
+doctype html
+html(lang='ru-UA')
+    head
+        meta(charset='UTF-8')
+        title️ Новости - Drapesdesign: Дизайн и пошив штор в Украине
+        link(rel="canonical" href="https://www.drapesdesign.com.ua/news")
+        link(rel="alternate" hreflang="ru" href="https://www.drapesdesign.com.ua/news")
+        meta(name='robots', content='index, follow')
+        meta(name='description', content='Постоянные скидки: -20% на второе окно и -30% на третье при пошиве штор на заказ')
+        meta(name='keywords', content='шторы Киев, пошив штор, дизайн штор, купить шторы, шоры на заказ, шторы под заказ, шторы для спальни, шторы для кухни, шторы для гостинной, шторы для ванной')
+        meta(property='og:type', content='website')
+        meta(property='og:locale', content='ru-UA')
+        meta(property='og:title', content='Новости - Drapesdesign: Дизайн и пошив штор в Украине')
+        meta(property='og:description', content='Постоянные скидки: -20% на второе окно и -30% на третье при пошиве штор на заказ')
+        meta(property='og:url', content='https://www.drapesdesign.com.ua/news')
+        meta(property='og:site_name', content='drapesdesign.com.ua')
+        meta(property='og:image', content='https://drapesdesign.com.ua/images/drapesdesign_share.jpg')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+        link(rel='stylesheet', href='../styles/styles.css')
+    body#body
+        .l-wrapper.d-news
+            include ../components/topbar
+            include ../components/header
+            main
+                section.d-section
+                    include ../components/breadcrumbs
+                    +breadcrumbs('Новости')
+                    .d-section__content.l-container
+                        ul.d-cards
+                            li.d-cards__item
+                                img.d-cards__itemImg(src="../images/news/autumn-sale.jpg" alt='Autumn sale image of Drapesdesign')
+                                .d-cards__itemInfo
+                                    h2.d-cards__itemTitle
+                                        |-15% на готовые изделия от Drapesdesign в &nbsp;
+                                        a.d-link(href='https://www.drapesdesign.com.ua/shop') интернет-магазине.
+                                        br
+                                        |Скиaдка действует до конца осени (30.11.2020)
+                            li.d-cards__item
+                                img.d-cards__itemImg(src="../images/news/permanent-discount.jpg" alt='Permanent discounts image of Drapesdesign')
+                                .d-cards__itemInfo
+                                    h2.d-cards__itemTitle
+                                        | -20% на второе окно и -30% на третье окно. &nbsp;
+                                        | Скиaдка действует при пошиве штор на заказ.
+                                        br
+                                        a.d-link(href='https://www.drapesdesign.com.ua/portfolio') Посмотреть работы
+
+
+        include ../components/footer
+        include ../components/scroll-top
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
+        script(src="//code.jivosite.com/widget/3Nay3paAEO" async)
+        script(src='../js/script-min.js')
+        script.

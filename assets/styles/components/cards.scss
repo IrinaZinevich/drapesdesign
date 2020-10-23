@@ -1,0 +1,67 @@
+.d-cards {
+  padding: 20px 0;
+
+  @include phones {
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    @include phones-excluded {
+      align-items: center;
+    }
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    &:nth-child(even) {
+      @include phones-excluded {
+        flex-direction: row-reverse;
+
+        .d-cards__item {
+          &Info {
+            border-left: 5px solid var(--dd-primary-color);
+            border-right: 0;
+            transform: translateX(30px);
+            text-align: right;
+          }
+        }
+      }
+    }
+
+
+    &Info {
+      @include phones-excluded {
+        border-right: 5px solid var(--dd-primary-color);
+        transform: translateX(-30px);
+      }
+    }
+
+    &Title {
+      max-width: 500px;
+      padding: 30px;
+      font-size: 20px;
+      line-height: 1.5;
+      background: var(--dd-color-white);
+
+      @include phones {
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+
+    &Img {
+      display: block;
+      width: 100%;
+      max-width: 350px;
+
+      @include phones {
+        margin-top: 15px;
+        max-width: 130px;
+      }
+    }
+  }
+}

@@ -26,16 +26,20 @@ window.addEventListener("DOMContentLoaded", function() {
         statusText.innerHTML = "В отправке данных произошла ошибка! Попробуйте еще раз.";
     }
 
-    resetButton.addEventListener("click", function() {
-        form.style = "display: block";
-        status.style = "display: none";
-    });
+    if(resetButton) {
+        resetButton.addEventListener("click", function() {
+            form.style = "display: block";
+            status.style = "display: none";
+        });
+    }
 
-    form.addEventListener("submit", function(ev) {
-        ev.preventDefault();
-        var data = new FormData(form);
-        ajax(form.method, form.action, data, success, error);
-    });
+    if(form) {
+        form.addEventListener("submit", function(ev) {
+            ev.preventDefault();
+            var data = new FormData(form);
+            ajax(form.method, form.action, data, success, error);
+        });
+    }
 });
 function ajax(method, url, data, success, error) {
     var xhr = new XMLHttpRequest();

@@ -89,6 +89,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   font-family: var(--dd-font-family);
   color: var(--dd-font-color);
@@ -104,7 +106,11 @@ body {
 }
 
 .l-wrapper {
-  height: 100%;
+}
+
+.l-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a {
@@ -169,6 +175,10 @@ h1, h2, h3, h4, h5, h6 {
 
 dt, dd {
   margin: 0;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .d-row {
