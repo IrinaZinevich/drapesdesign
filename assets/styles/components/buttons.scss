@@ -20,8 +20,8 @@
   &--toTop {
     display: none;
     position: fixed;
-    bottom: 50px;
-    right: 15px;
+    bottom: 15px;
+    left: 15px;
     z-index: 100;
     width: 3.438em;
     height: 3.438em;
@@ -29,15 +29,9 @@
     padding: 0.313em;
     border: 1px solid var(--dd-button-primary-color);
 
-    @include tablets {
-      margin-bottom: 45px;
-      margin-right: 12px;
-    }
-
     &:hover {
       --dd-button-primary-color: var(--dd-button-hover-color);
     }
-
     span {
       display: flex;
       align-items: center;
