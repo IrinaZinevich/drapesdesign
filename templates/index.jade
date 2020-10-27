@@ -18,7 +18,7 @@ html(lang='ru-UA')
         meta(property='og:image', content='https://drapesdesign.com.ua/images/drapesdesign_share.jpg')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
-        link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet', media="print", onload="this.media='all'")
         link(rel='stylesheet', href='styles/libs/cocoen.css')
         link(rel='stylesheet', href='styles/libs/swiper.css')
         link(rel='stylesheet', href='styles/styles.css')
@@ -26,6 +26,7 @@ html(lang='ru-UA')
         .l-wrapper
             include components/topbar
             include components/header
+            +header('')
             main
                 section#hero.d-section.d-section--hero.d-section--main
                     .d-section__content

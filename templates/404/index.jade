@@ -1,0 +1,32 @@
+doctype html
+html(lang='ru-UA')
+    head
+        meta(charset='UTF-8')
+        title️ Шторы под заказ и готовые в Киеве с доставкой по Украине
+        link(rel="canonical" href="https://www.drapesdesign.com.ua/portfolio")
+        link(rel="alternate" hreflang="ru" href="https://www.drapesdesign.com.ua")
+        meta(name='robots', content='index, nofollow')
+        meta(property='og:type', content='website')
+        meta(property='og:locale', content='ru-UA')
+        meta(property='og:site_name', content='drapesdesign.com.ua')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+        link(rel='stylesheet', href='../styles/styles.css')
+    body#body
+        .l-wrapper
+            include ../components/topbar
+            include ../components/header
+            +header('d-header--fixed')
+            main
+                .d-error
+                    h1.d-error__title 404
+                    .d-error__text Упс... Запрашиваемая страница не найдена
+                    a.d-button.d-button--primary(href='/') На главную
+        include ../components/footer
+        include ../components/scroll-top
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
+        script(src='../js/script-min.js')
+        script.
