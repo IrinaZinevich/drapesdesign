@@ -1,0 +1,53 @@
+mixin product-layout(productName)
+    doctype html
+    html(lang='ru-UA')
+        head
+            - var product = drapesList[productName]
+            meta(charset='UTF-8')
+            title=product.metaTitle
+            link(rel='canonical' href='https://www.drapesdesign.com.ua/shop/'+productName)
+            link(rel='alternate' hreflang='ru' href='https://www.drapesdesign.com.ua/shop/'+productName)
+            meta(name='robots', content='index, follow')
+            meta(name='description', content=product.metaDescription)
+            meta(name='keywords', content=product.metaKeywords)
+            meta(property='og:type', content='product')
+            meta(property='og:locale', content='ru-UA')
+            meta(property='og:title', content=product.metaTitle)
+            meta(property='og:description', content=product.metaDescription)
+            meta(property='og:url', content='https://www.drapesdesign.com.ua/shop/'+productName)
+            meta(property='og:site_name', content='drapesdesign.com.ua')
+            meta(property='og:image', content='https://drapesdesign.com.ua/images/share/'+productName+'.jpg')
+            meta(property='product:price:amount', content=product.metaPrice)
+            meta(property='product:price:currency', content='UAH')
+            meta(property='product:availability', content=product.metaAvailability)
+            meta(property='product:condition', content='new')
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+
+            link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
+            link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
+            link(rel='stylesheet', href='../../styles/libs/swiper.css')
+            link(rel='stylesheet', href='../../styles/styles.css')
+        body#body
+            .l-wrapper.d-shop
+                include ../components/topbar
+                include ../components/header
+                +header('')
+                include ../components/modal
+                include ../components/banner
+                include ../components/breadcrumbs
+                include ../components/product
+                +modal('Сделать заказ', 'Оставьте контактные данные и мы свяжемся с Вами в ближайшее время для для выяснения деталей заказа', 'Отправить')
+                main
+                    +banner('У нас действуют постоянные скидки: -20% на второе окно и -30% на третье при пошиве штор на заказ. ', '#')
+                    +breadcrumbs('Магазин', product.title)
+                    .d-section
+                        +product(productName)
+                include ../components/footer
+            include ../components/scroll-top
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+            script(src='https://kit.fontawesome.com/6d0f4a8850.js', crossorigin='anonymous')
+            script(src="//code.jivosite.com/widget/3Nay3paAEO" async)
+            script(src='../../js/libs/swiper-min.js')
+            script(src='../../js/shop-slider-min.js')
+            script(src='../../js/script-min.js')
+            script.
