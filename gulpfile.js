@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     sass.compiler = require('node-sass');
 
 function style() {
-    return gulp.src('./assets/styles/styles.scss')
+    return gulp.src(['./assets/styles/styles.scss', '!./assets/styles/components/**/*.scss'])
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer(['last 15 versions', '> 1%'], { cascade: true }))
         .pipe(gulp.dest('./app/styles'))
@@ -26,7 +26,7 @@ function styleLibs() {
 }
 
 function tpl() {
-    return gulp.src('./templates/**/**/*.jade')
+    return gulp.src('templates/**/**/**/index.jade')
         .pipe(data( function(file) {
             return JSON.parse(
                 fs.readFileSync('./data.json' , { encoding: 'utf8' })

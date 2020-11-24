@@ -212,6 +212,7 @@
       min-height: 400px;
 
       @include phones {
+        flex-direction: row;
         padding: 30px var(--dd-base-padding);
       }
     }
