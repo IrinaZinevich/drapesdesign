@@ -20,6 +20,15 @@ html(lang='ru-UA')
         link(rel='icon', type='image/x-icon', href='https://www.drapesdesign.com.ua/images/fav.png')
         link(href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic', rel='stylesheet')
         link(rel='stylesheet', href='../styles/styles.css')
+        // Global site tag (gtag.js) - Google Analytics
+        script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-SG2Q10TWVD')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-SG2Q10TWVD');
         // Facebook Pixel Code
         script.
             !function (f, b, e, v, n, t, s) {
